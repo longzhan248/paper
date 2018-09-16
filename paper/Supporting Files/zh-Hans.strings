@@ -1,0 +1,13 @@
+/* 
+  zh-Hans.strings
+  paper
+
+  Created by 詹龙 on 2018/9/16.
+  Copyright © 2018年 longzhan. All rights reserved.
+*/
+// 首页TabBar文本
+"TBNote"                                   ="便签";
+"TBCapsule"                                ="胶囊";
+"TBPublish"                                ="发布";
+"TBTarget"                                 ="目标";
+"TBSetting"                                ="设置";
