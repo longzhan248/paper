@@ -10,8 +10,15 @@
 #import "ZLNoteHeaderCell.h"
 #import "ZLNoteTableView.h"
 #import "UIScrollView+ZLHeaderScaleImage.h"
+#import "ZLNoteModel.h"
+#import "EmptyDataCell.h"
 
 @interface ZLNoteViewController : BaseViewController
+{
+    FMDBManager *manager;
+}
+
+@property (nonatomic,strong) EmptyDataCell *emptyCell;
 
 @property (nonatomic,strong) ZLNoteTableView  *noteTableView;
 @property (nonatomic,strong) ZLNoteHeaderCell *noteHeaderCell;

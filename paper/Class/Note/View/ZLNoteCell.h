@@ -7,12 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZLNoteModel.h"
 
 @interface ZLNoteCell : UITableViewCell
 
 + (instancetype)cellWithTableView:(UITableView *) tableView;
 
+@property (nonatomic, strong) ZLNoteModel *noteModel;
+
 @property (nonatomic,strong) UIColor *leftColor;
+
+@property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UILabel *contentLabel;
 
 @property (weak, nonatomic) IBOutlet UIView *noteBgView;
 @property (weak, nonatomic) IBOutlet UILabel *leftBgLable;

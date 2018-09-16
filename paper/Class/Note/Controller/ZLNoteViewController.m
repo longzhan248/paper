@@ -14,12 +14,22 @@
 
 @implementation ZLNoteViewController
 
+- (void)dealloc
+{
+    [NSNOTIFICATION removeObserver:self name:@"publish_success" object:nil];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
         _noteHeaderCell = [[[NSBundle mainBundle] loadNibNamed:@"ZLNoteHeaderCell" owner:self options:nil] lastObject];
+        _emptyCell = [[[NSBundle mainBundle] loadNibNamed:@"EmptyDataCell" owner:self options:nil] lastObject];
+        [NSNOTIFICATION addObserver:self selector:@selector(getDataAction:) name:@"publish_success" object:nil];
+
+        _noteArray = [NSMutableArray array];
+
     }
     return self;
 }
@@ -52,12 +62,50 @@
     _noteTableView.tableHeaderView = _noteHeaderCell;
     [self.view addSubview:_noteTableView];
     
-    // 测试数据
-    _noteArray = [NSMutableArray arrayWithObjects:NOTE_PURPLE,NOTE_RED,NOTE_GREEN,NOTE_YELLOW,NOTE_PURPLE,NOTE_RED,NOTE_GREEN,NOTE_YELLOW, nil];
-    
-    _noteTableView.data = _noteArray;
-    [_noteTableView reloadData];
+    // 初始化数据库
+    manager = [[FMDBManager alloc] init];
+    [FMDBManager shareManager];
+    [self getNoteListData];
+
 }
 
+#pragma mark - 获取插入数据库的数据
+- (void)getNoteListData {
+    [_noteArray removeAllObjects];
+
+    FMResultSet *data = [manager backResults:@"note"];
+    while ([data next]) {
+        int uid = [data intForColumn:@"uid"];
+        NSString *content = [data stringForColumn:@"content"];
+        int colorTag = [data intForColumn:@"colorTag"];
+        NSString *ctime = [data stringForColumn:@"ctime"];
+        NSData *img = [data dataForColumn:@"imgData"];
+        ZLNoteModel *noteModel = [[ZLNoteModel alloc] init];
+        noteModel.uid = uid;
+        noteModel.content = content;
+        noteModel.colorTag = colorTag;
+        noteModel.imgData = img;
+        noteModel.ctime = ctime;
+        [_noteArray addObject:noteModel];
+    }
+    
+    if (_noteArray.count==0) {
+        _emptyCell.hidden = NO;
+        _emptyCell.emptyNote = @"发点什么，精彩你我！";
+        [self.view addSubview:_emptyCell];
+    }else{
+        _emptyCell.hidden = YES;
+    }
+    
+    _noteHeaderCell.totalLabel.text = [NSString stringWithFormat:@"%lu",(unsigned long)_noteArray.count];
+    self.noteTableView.data = _noteArray;
+    [self .noteTableView reloadData];
+}
+
+#pragma mark - 通知
+- (void)getDataAction:(NSNotification *)notification
+{
+    [self getNoteListData];
+}
 
 @end

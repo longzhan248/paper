@@ -9,6 +9,12 @@
 #ifndef UtilsMacro_h
 #define UtilsMacro_h
 
+#ifdef DEBUG
+#define NSLog(...) printf("PAPER: [%s] [%s] line:(%d): %s\n", [[NSDate date].description UTF8String], [[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:__VA_ARGS__]UTF8String])
+#else
+#define NSLog(...)
+#endif
+
 //文本设置
 #define ZLLangaueStr(key) [[NSBundle mainBundle] localizedStringForKey:key value:nil table:@"zh-Hans"]
 

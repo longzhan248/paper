@@ -8,7 +8,7 @@
 
 #import "BaseTableView.h"
 #import "ZLNoteCell.h"
-
+#import "ZLNoteModel.h"
 
 @interface ZLNoteTableView : BaseTableView
 

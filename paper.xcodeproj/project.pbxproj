@@ -98,6 +98,12 @@
 		A07D74D6214E0C0E006749CD /* libxslt.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A07D74D5214E0C0E006749CD /* libxslt.1.tbd */; };
 		A07D74D8214E0C1C006749CD /* libc++.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A07D74D7214E0C1C006749CD /* libc++.1.tbd */; };
 		A07D74DA214E0C34006749CD /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A07D74D9214E0C34006749CD /* libxml2.2.tbd */; };
+		A07D74DE214E7FCB006749CD /* ZLNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D74DD214E7FCB006749CD /* ZLNotificationManager.m */; };
+		A07D74E2214E81C4006749CD /* FMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D74E1214E81C4006749CD /* FMDBManager.m */; };
+		A07D74E5214E8523006749CD /* NSAttributedString+ZLSizeLab.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D74E4214E8523006749CD /* NSAttributedString+ZLSizeLab.m */; };
+		A07D74E8214E8555006749CD /* UIDevice+ZLLigs.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D74E7214E8555006749CD /* UIDevice+ZLLigs.m */; };
+		A07D74EC214E8A0B006749CD /* EmptyDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D74EA214E8A0B006749CD /* EmptyDataCell.m */; };
+		A07D74ED214E8A0B006749CD /* EmptyDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A07D74EB214E8A0B006749CD /* EmptyDataCell.xib */; };
 		D412F2668F735689CA9DDFC2 /* Pods_paper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD2F18FBF98AB8A85D35C7E /* Pods_paper.framework */; };
 /* End PBXBuildFile section */
 
@@ -292,6 +298,17 @@
 		A07D74D5214E0C0E006749CD /* libxslt.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxslt.1.tbd; path = usr/lib/libxslt.1.tbd; sourceTree = SDKROOT; };
 		A07D74D7214E0C1C006749CD /* libc++.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.1.tbd"; path = "usr/lib/libc++.1.tbd"; sourceTree = SDKROOT; };
 		A07D74D9214E0C34006749CD /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = usr/lib/libxml2.2.tbd; sourceTree = SDKROOT; };
+		A07D74DC214E7FCB006749CD /* ZLNotificationManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLNotificationManager.h; sourceTree = "<group>"; };
+		A07D74DD214E7FCB006749CD /* ZLNotificationManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLNotificationManager.m; sourceTree = "<group>"; };
+		A07D74E0214E81C4006749CD /* FMDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FMDBManager.h; sourceTree = "<group>"; };
+		A07D74E1214E81C4006749CD /* FMDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FMDBManager.m; sourceTree = "<group>"; };
+		A07D74E3214E8523006749CD /* NSAttributedString+ZLSizeLab.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+ZLSizeLab.h"; sourceTree = "<group>"; };
+		A07D74E4214E8523006749CD /* NSAttributedString+ZLSizeLab.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+ZLSizeLab.m"; sourceTree = "<group>"; };
+		A07D74E6214E8555006749CD /* UIDevice+ZLLigs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIDevice+ZLLigs.h"; sourceTree = "<group>"; };
+		A07D74E7214E8555006749CD /* UIDevice+ZLLigs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+ZLLigs.m"; sourceTree = "<group>"; };
+		A07D74E9214E8A0B006749CD /* EmptyDataCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyDataCell.h; sourceTree = "<group>"; };
+		A07D74EA214E8A0B006749CD /* EmptyDataCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyDataCell.m; sourceTree = "<group>"; };
+		A07D74EB214E8A0B006749CD /* EmptyDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -462,6 +479,8 @@
 		A07D73B4214DB95C006749CD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A07D74DF214E81A8006749CD /* FMDB */,
+				A07D74DB214E7FAB006749CD /* TipNotification */,
 				A07D74A5214DFC2E006749CD /* Tutu */,
 				A07D7457214DD170006749CD /* HyPopMenuView */,
 				A07D748D214DDDC8006749CD /* KeyBoard */,
@@ -559,6 +578,9 @@
 			children = (
 				A07D73FC214DC2FB006749CD /* BaseTableView.h */,
 				A07D73FD214DC2FB006749CD /* BaseTableView.m */,
+				A07D74E9214E8A0B006749CD /* EmptyDataCell.h */,
+				A07D74EA214E8A0B006749CD /* EmptyDataCell.m */,
+				A07D74EB214E8A0B006749CD /* EmptyDataCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -780,6 +802,10 @@
 			children = (
 				A07D73E0214DBD20006749CD /* UIView+ZLAdditions.h */,
 				A07D73E1214DBD20006749CD /* UIView+ZLAdditions.m */,
+				A07D74E3214E8523006749CD /* NSAttributedString+ZLSizeLab.h */,
+				A07D74E4214E8523006749CD /* NSAttributedString+ZLSizeLab.m */,
+				A07D74E6214E8555006749CD /* UIDevice+ZLLigs.h */,
+				A07D74E7214E8555006749CD /* UIDevice+ZLLigs.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -880,6 +906,24 @@
 				A07D74AB214E0086006749CD /* ExtendEditTurnAndCutView.m */,
 			);
 			path = Tutu;
+			sourceTree = "<group>";
+		};
+		A07D74DB214E7FAB006749CD /* TipNotification */ = {
+			isa = PBXGroup;
+			children = (
+				A07D74DC214E7FCB006749CD /* ZLNotificationManager.h */,
+				A07D74DD214E7FCB006749CD /* ZLNotificationManager.m */,
+			);
+			path = TipNotification;
+			sourceTree = "<group>";
+		};
+		A07D74DF214E81A8006749CD /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				A07D74E0214E81C4006749CD /* FMDBManager.h */,
+				A07D74E1214E81C4006749CD /* FMDBManager.m */,
+			);
+			path = FMDB;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1000,6 +1044,7 @@
 				A07D741E214DC750006749CD /* ZLNoteCell.xib in Resources */,
 				A07D7474214DD6CF006749CD /* ZLEveryDayViewController.xib in Resources */,
 				A07D746F214DD623006749CD /* ZLCapsuleCell.xib in Resources */,
+				A07D74ED214E8A0B006749CD /* EmptyDataCell.xib in Resources */,
 				A07D738A214DB83E006749CD /* LaunchScreen.storyboard in Resources */,
 				A07D7479214DD6E3006749CD /* ZLFutureViewController.xib in Resources */,
 				A07D7387214DB83E006749CD /* Assets.xcassets in Resources */,
@@ -1074,6 +1119,7 @@
 				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/GPUImage/GPUImage.framework",
 				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/RadioButton/RadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/pop/pop.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1081,6 +1127,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GPUImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/pop.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1100,6 +1147,7 @@
 				A07D7407214DC48F006749CD /* BaseViewController.m in Sources */,
 				A07D73EB214DBFEF006749CD /* ZLTabBar.m in Sources */,
 				A07D7489214DDD1B006749CD /* PlaceholderTextView.m in Sources */,
+				A07D74E2214E81C4006749CD /* FMDBManager.m in Sources */,
 				A07D738D214DB83E006749CD /* main.m in Sources */,
 				A07D7497214DDF6E006749CD /* MLInputDodger.m in Sources */,
 				A07D7493214DDF5D006749CD /* UIView+MLInputDodger.m in Sources */,
@@ -1121,9 +1169,12 @@
 				A07D74BE214E0281006749CD /* CustomEditViewController.m in Sources */,
 				A07D745A214DD18E006749CD /* HyPopMenuView.m in Sources */,
 				A07D7456214DCF94006749CD /* TabPageView.m in Sources */,
+				A07D74EC214E8A0B006749CD /* EmptyDataCell.m in Sources */,
+				A07D74DE214E7FCB006749CD /* ZLNotificationManager.m in Sources */,
 				A07D741D214DC750006749CD /* ZLNoteCell.m in Sources */,
 				A07D7401214DC3AE006749CD /* APBaseNavigationController.m in Sources */,
 				A07D74B8214E023C006749CD /* CustomPhoto.m in Sources */,
+				A07D74E8214E8555006749CD /* UIDevice+ZLLigs.m in Sources */,
 				A07D7421214DC7B6006749CD /* ZLNoteTableView.m in Sources */,
 				A07D73D9214DBBF2006749CD /* JastorRuntimeHelper.m in Sources */,
 				A07D74A8214DFC85006749CD /* TutuSimpleBase.m in Sources */,
@@ -1147,6 +1198,7 @@
 				A07D7418214DC6F7006749CD /* ZLNoteHeaderCell.m in Sources */,
 				A07D743B214DCA5E006749CD /* ZLPublishViewController.m in Sources */,
 				A07D7430214DC9FD006749CD /* ZLCapsuleViewController.m in Sources */,
+				A07D74E5214E8523006749CD /* NSAttributedString+ZLSizeLab.m in Sources */,
 				A07D7464214DD2A0006749CD /* UIColor+ImageGetColor.m in Sources */,
 				A07D7490214DDDDB006749CD /* UIKeyboardView.m in Sources */,
 				A07D748C214DDD90006749CD /* CustomTextView.m in Sources */,

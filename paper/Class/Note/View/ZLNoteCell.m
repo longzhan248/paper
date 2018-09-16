@@ -30,11 +30,19 @@
     [super setFrame:frame];
 }
 
-- (void)setLeftColor:(UIColor *)leftColor
-{
-    _leftBgLable.backgroundColor = leftColor;
+- (void)setNoteModel:(ZLNoteModel *)noteModel {
+    _dateLabel.text = [CommonUtil dateChangeFormatAt:[CommonUtil timeIntervalTurnDate:noteModel.ctime]];
+    _contentLabel.text = noteModel.content;
+
+    if (noteModel.colorTag==0) {
+        _leftBgLable.backgroundColor = NOTE_GREEN;
+    }else if (noteModel.colorTag==1){
+        _leftBgLable.backgroundColor = NOTE_RED;
+    }else if (noteModel.colorTag==2){
+        _leftBgLable.backgroundColor = NOTE_YELLOW;
+    }else if (noteModel.colorTag==3){
+        _leftBgLable.backgroundColor = NOTE_PURPLE;
+    }
 }
-
-
 
 @end

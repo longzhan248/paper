@@ -76,6 +76,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
                 <outlet property="headerImg" destination="dOv-uQ-SRH" id="pf5-eX-m3V"/>
+                <outlet property="totalLabel" destination="yu0-Tz-lzj" id="Lmh-4B-2FO"/>
             </connections>
             <point key="canvasLocation" x="7" y="20"/>
         </tableViewCell>

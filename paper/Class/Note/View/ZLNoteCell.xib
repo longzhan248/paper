@@ -81,6 +81,8 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.98039215690000003" green="0.98431372549999996" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
+                <outlet property="contentLabel" destination="WBP-sn-Nrz" id="baK-W0-M1E"/>
+                <outlet property="dateLabel" destination="2DN-uz-bzT" id="9Uz-HN-hV0"/>
                 <outlet property="leftBgLable" destination="0Ax-Ui-Nee" id="bGJ-H3-reK"/>
                 <outlet property="noteBgView" destination="Vrk-78-QlX" id="Wv5-Fa-5RK"/>
             </connections>

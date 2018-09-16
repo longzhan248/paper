@@ -21,7 +21,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     _noteCell = [ZLNoteCell cellWithTableView:tableView];
-    _noteCell.leftColor = self.data[indexPath.row];
+    _noteCell.noteModel = self.data[indexPath.row];
     return _noteCell;
 }
 

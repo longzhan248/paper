@@ -23,4 +23,7 @@
 
 #import <Masonry/Masonry.h>
 
+#import "FMDBManager.h"
+#import "FMResultSet.h"
+
 #endif /* paperHeader_pch */

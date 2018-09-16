@@ -97,7 +97,31 @@
 #pragma mark - 发布事件
 - (void)sendAction:(UIButton *)sender
 {
+    [self insertDataFMDB];
+}
+
+#pragma mark - 发布便签插入数据库
+- (void)insertDataFMDB {
     
+    FMDBManager *manager = [[FMDBManager alloc] init];
+    [FMDBManager shareManager];
+    
+    NSDate *sendDate = [NSDate date];
+    NSString *ctime = [NSString stringWithFormat:@"%ld", (long)[sendDate timeIntervalSince1970]];
+    // 在数据库里插入数据
+    _noteModel = [[ZLNoteModel alloc] init];
+    _noteModel.uid = [ctime intValue];
+    _noteModel.title = @"";
+    _noteModel.content = _textView.text;
+    _noteModel.starTag = 0;
+    _noteModel.colorTag = colorTag;
+    _noteModel.ctime = ctime;
+    _noteModel.imgData = imgData;
+    [manager insterDataWithModel:_noteModel];
+    
+    [CommonUtil NotiTip:@"便签发布成功" color:SUCCESS_COLOR];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [CommonUtil registerNotice:@"publish_success" object:nil];
 }
 
 #pragma mark - 显示图片
@@ -123,6 +147,11 @@
         }
         return NO;
     }
+}
+
+#pragma mark - 选择标签颜色  0.green 1.red 2.yellow 3.purple
+- (IBAction)tagAction:(RadioButton *)sender {
+    colorTag = (int)sender.tag;
 }
 
 @end

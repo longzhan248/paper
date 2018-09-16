@@ -11,5 +11,7 @@
 @interface ZLNoteHeaderCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *headerImg;
+@property (weak, nonatomic) IBOutlet UILabel *totalLabel;
+
 
 @end
