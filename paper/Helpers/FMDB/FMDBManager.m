@@ -45,7 +45,7 @@
 }
 
 - (void)creatList {
-    BOOL result = [fmdb executeUpdate:@"create table if not exists note(uid varchar ,title varchar,content varchar ,starTag varchar , colorTag varchar , imgData blob ,ctime varchar)"];
+    BOOL result = [fmdb executeUpdate:@"create table if not exists note(uid varchar ,title varchar,content varchar ,starTag varchar , colorTag varchar , width varchar ,height varchar , imgData blob ,ctime varchar)"];
     if (result) {
         NSLog(@"==========创建表成功");
     }else{
@@ -55,7 +55,7 @@
 
 - (BOOL)insterDataWithModel:(ZLNoteModel *)model
 {
-    BOOL isSucess = [fmdb executeUpdate:@"insert into note(uid , title , content , starTag , colorTag , imgData ,ctime) values(?,?,?,?,?,?,?)",@(model.uid),model.title,model.content,@(model.starTag),@(model.colorTag),model.imgData,model.ctime];
+    BOOL isSucess = [fmdb executeUpdate:@"insert into note(uid , title , content , starTag , colorTag , width, height, imgData ,ctime) values(?,?,?,?,?,?,?,?,?)",@(model.uid),model.title,model.content,@(model.starTag),@(model.colorTag),@(model.width),@(model.height),model.imgData,model.ctime];
     if (isSucess) {
         NSLog(@"===========插入数据成功");
     }else{
@@ -105,6 +105,15 @@
 - (BOOL)deleteFind:(int)unid {
     NSString *deleteSql = [NSString stringWithFormat:@"delete from app where uid = %d",unid];
     BOOL result = [fmdb executeUpdate:deleteSql];
+    return result;
+}
+
+- (BOOL)updateFind:(ZLNoteModel *)model
+{
+    NSString *updateSql = [NSString stringWithFormat:@"update note set content = '%@', colorTag = %d,width = %f,height = %f,imgData= '%@',ctime = '%@' where uid =%d",model.content,model.colorTag,model.width,model.height,model.imgData,model.ctime,model.uid];
+    
+    BOOL result = [fmdb executeUpdate:updateSql];
+    
     return result;
 }
 

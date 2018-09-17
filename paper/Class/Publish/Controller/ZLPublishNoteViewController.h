@@ -7,34 +7,12 @@
 //
 
 #import "BaseViewController.h"
-#import "PlaceholderTextView.h"
-#import "MLInputDodger.h"
-#import "CustomAlbum.h"
-#import "ZLNoteModel.h"
-#import <RadioButton/RadioButton.h>
 
 
 @interface ZLPublishNoteViewController : BaseViewController
-{
-    UIView *topView;
-    UIButton *closeButton;
-    UILabel *titleLabel;
-    
-    UIButton *publishButton;
-    
-    NSData *imgData;
-    
-    int colorTag;
-}
 
-@property (nonatomic, strong) ZLNoteModel *noteModel;
-@property (nonatomic, strong) CustomAlbum *customAlbum;
 
-@property (weak, nonatomic) IBOutlet PlaceholderTextView *textView;
-@property (weak, nonatomic) IBOutlet UILabel *numLabel;
-@property (weak, nonatomic) IBOutlet UIImageView *selectImgView;
 
-- (IBAction)tagAction:(RadioButton *)sender;
 
 
 @end

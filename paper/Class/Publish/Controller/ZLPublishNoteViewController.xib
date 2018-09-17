@@ -68,21 +68,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="7vO-cu-nsZ" secondAttribute="trailing" constant="10" id="zHo-kY-bwq"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xBg-l8-4tQ">
-                                            <rect key="frame" x="0.0" y="150" width="375" height="8"/>
-                                            <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="8" id="QGN-fR-8VL"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Hk-BE-3tY">
-                                            <rect key="frame" x="0.0" y="158" width="375" height="150"/>
+                                            <rect key="frame" x="0.0" y="158" width="375" height="130"/>
                                             <subviews>
                                                 <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="publish_note_pic" translatesAutoresizingMaskIntoConstraints="NO" id="IgS-Vi-Whi">
-                                                    <rect key="frame" x="10" y="0.0" width="355" height="150"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="130"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
@@ -94,25 +84,15 @@
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="IgS-Vi-Whi" secondAttribute="trailing" constant="10" id="FPg-F6-rWo"/>
+                                                <constraint firstAttribute="trailing" secondItem="IgS-Vi-Whi" secondAttribute="trailing" constant="15" id="FPg-F6-rWo"/>
                                                 <constraint firstItem="IgS-Vi-Whi" firstAttribute="top" secondItem="6Hk-BE-3tY" secondAttribute="top" id="Nl6-hs-VSX"/>
-                                                <constraint firstAttribute="height" constant="150" id="Q5C-vA-Zjx"/>
+                                                <constraint firstAttribute="height" constant="130" id="Q5C-vA-Zjx"/>
                                                 <constraint firstAttribute="bottom" secondItem="IgS-Vi-Whi" secondAttribute="bottom" id="opy-Lp-uVJ"/>
-                                                <constraint firstItem="IgS-Vi-Whi" firstAttribute="leading" secondItem="6Hk-BE-3tY" secondAttribute="leading" constant="10" id="pcY-d4-rIy"/>
+                                                <constraint firstItem="IgS-Vi-Whi" firstAttribute="leading" secondItem="6Hk-BE-3tY" secondAttribute="leading" constant="15" id="pcY-d4-rIy"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kN9-yB-igo">
-                                            <rect key="frame" x="0.0" y="308" width="375" height="8"/>
-                                            <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="8" id="9zX-9P-7ST"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GKR-PE-WcU">
-                                            <rect key="frame" x="0.0" y="316" width="375" height="55"/>
+                                            <rect key="frame" x="0.0" y="296" width="375" height="55"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="便签颜色" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoP-Fh-iLg">
                                                     <rect key="frame" x="10" y="17.5" width="56" height="20"/>
@@ -134,53 +114,53 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoZ-AR-bz4" customClass="RadioButton">
-                                                    <rect key="frame" x="215" y="20" width="15" height="15"/>
+                                                <button opaque="NO" tag="10" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoZ-AR-bz4" customClass="RadioButton">
+                                                    <rect key="frame" x="170" y="7.5" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="15" id="fec-R9-I9K"/>
-                                                        <constraint firstAttribute="height" constant="15" id="m2u-8e-4Wu"/>
+                                                        <constraint firstAttribute="height" constant="40" id="dmi-vV-keI"/>
+                                                        <constraint firstAttribute="width" constant="40" id="pmg-Zi-elO"/>
                                                     </constraints>
-                                                    <state key="normal" image="green_unselect"/>
-                                                    <state key="selected" image="green_select"/>
+                                                    <state key="normal" image="publish_note_green_unselect"/>
+                                                    <state key="selected" image="publish_note_green_select"/>
                                                     <connections>
                                                         <action selector="tagAction:" destination="-1" eventType="touchUpInside" id="ZQw-FR-v6C"/>
                                                         <outletCollection property="groupButtons" destination="Wtm-dY-Bwa" id="S3E-12-9q0"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wtm-dY-Bwa" customClass="RadioButton">
-                                                    <rect key="frame" x="260" y="20" width="15" height="15"/>
+                                                <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wtm-dY-Bwa" customClass="RadioButton">
+                                                    <rect key="frame" x="220" y="7.5" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="15" id="6sO-T8-Q6s"/>
-                                                        <constraint firstAttribute="width" constant="15" id="sVq-bJ-cQe"/>
+                                                        <constraint firstAttribute="height" constant="40" id="RwS-UN-h92"/>
+                                                        <constraint firstAttribute="width" constant="40" id="dm8-Wu-YyC"/>
                                                     </constraints>
-                                                    <state key="normal" image="red_unselect"/>
-                                                    <state key="selected" image="red_select"/>
+                                                    <state key="normal" image="publish_note_red_unselect"/>
+                                                    <state key="selected" image="publish_note_red_select"/>
                                                     <connections>
                                                         <action selector="tagAction:" destination="-1" eventType="touchUpInside" id="C6w-YG-FBk"/>
                                                         <outletCollection property="groupButtons" destination="gYE-1L-BeC" id="cga-d8-iBt"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-1L-BeC" customClass="RadioButton">
-                                                    <rect key="frame" x="305" y="20" width="15" height="15"/>
+                                                <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gYE-1L-BeC" customClass="RadioButton">
+                                                    <rect key="frame" x="270" y="7.5" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="15" id="X1S-6J-pc7"/>
-                                                        <constraint firstAttribute="height" constant="15" id="ewY-1C-5mn"/>
+                                                        <constraint firstAttribute="height" constant="40" id="CTu-Gm-PN7"/>
+                                                        <constraint firstAttribute="width" constant="40" id="ZBt-0c-Thd"/>
                                                     </constraints>
-                                                    <state key="normal" image="yellow_unselect"/>
-                                                    <state key="selected" image="yellow_select"/>
+                                                    <state key="normal" image="publish_note_yellow_unselect"/>
+                                                    <state key="selected" image="publish_note_yellow_select"/>
                                                     <connections>
                                                         <action selector="tagAction:" destination="-1" eventType="touchUpInside" id="uLi-D2-mx2"/>
                                                         <outletCollection property="groupButtons" destination="9UQ-pF-EJz" id="AEL-NT-yia"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UQ-pF-EJz" customClass="RadioButton">
-                                                    <rect key="frame" x="350" y="20" width="15" height="15"/>
+                                                <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9UQ-pF-EJz" customClass="RadioButton">
+                                                    <rect key="frame" x="320" y="7.5" width="40" height="40"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="15" id="JK6-20-5Ke"/>
-                                                        <constraint firstAttribute="width" constant="15" id="gVb-Kx-wSy"/>
+                                                        <constraint firstAttribute="height" constant="40" id="3pG-mE-9rD"/>
+                                                        <constraint firstAttribute="width" constant="40" id="sve-D5-JMa"/>
                                                     </constraints>
-                                                    <state key="normal" image="purple_unselect"/>
-                                                    <state key="selected" image="purple_select"/>
+                                                    <state key="normal" image="publish_note_purole_unselect"/>
+                                                    <state key="selected" image="publish_note_purole_select"/>
                                                     <connections>
                                                         <action selector="tagAction:" destination="-1" eventType="touchUpInside" id="qfG-5f-rxs"/>
                                                     </connections>
@@ -188,45 +168,35 @@
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstItem="gYE-1L-BeC" firstAttribute="leading" secondItem="Wtm-dY-Bwa" secondAttribute="trailing" constant="30" id="0sc-0Q-KCZ"/>
-                                                <constraint firstItem="Wtm-dY-Bwa" firstAttribute="height" secondItem="DoZ-AR-bz4" secondAttribute="height" id="Drq-EY-uM5"/>
-                                                <constraint firstItem="gYE-1L-BeC" firstAttribute="centerY" secondItem="Wtm-dY-Bwa" secondAttribute="centerY" id="Dvf-4n-24E"/>
-                                                <constraint firstItem="gYE-1L-BeC" firstAttribute="height" secondItem="Wtm-dY-Bwa" secondAttribute="height" id="I76-IE-cuu"/>
+                                                <constraint firstItem="DoZ-AR-bz4" firstAttribute="centerY" secondItem="GKR-PE-WcU" secondAttribute="centerY" id="1EW-sh-I8C"/>
+                                                <constraint firstItem="9UQ-pF-EJz" firstAttribute="centerY" secondItem="gYE-1L-BeC" secondAttribute="centerY" id="5oK-As-p95"/>
+                                                <constraint firstItem="gYE-1L-BeC" firstAttribute="centerY" secondItem="GKR-PE-WcU" secondAttribute="centerY" id="BKX-9E-dZN"/>
                                                 <constraint firstItem="a7L-6h-0EG" firstAttribute="centerY" secondItem="ZoP-Fh-iLg" secondAttribute="centerY" id="IqP-LM-sPH"/>
                                                 <constraint firstAttribute="height" constant="55" id="JCG-GT-Z2E"/>
-                                                <constraint firstItem="Wtm-dY-Bwa" firstAttribute="centerY" secondItem="DoZ-AR-bz4" secondAttribute="centerY" id="PYs-wz-HiE"/>
-                                                <constraint firstItem="9UQ-pF-EJz" firstAttribute="centerY" secondItem="gYE-1L-BeC" secondAttribute="centerY" id="Q8a-Al-PC7"/>
+                                                <constraint firstItem="Wtm-dY-Bwa" firstAttribute="centerY" secondItem="GKR-PE-WcU" secondAttribute="centerY" id="KzY-fZ-5Ku"/>
+                                                <constraint firstItem="9UQ-pF-EJz" firstAttribute="leading" secondItem="gYE-1L-BeC" secondAttribute="trailing" constant="10" id="RvQ-tM-Ypp"/>
+                                                <constraint firstItem="9UQ-pF-EJz" firstAttribute="centerY" secondItem="GKR-PE-WcU" secondAttribute="centerY" id="Xnl-oo-vmB"/>
                                                 <constraint firstItem="a7L-6h-0EG" firstAttribute="leading" secondItem="ZoP-Fh-iLg" secondAttribute="trailing" constant="15" id="aYx-tT-YXp"/>
+                                                <constraint firstItem="Wtm-dY-Bwa" firstAttribute="centerY" secondItem="GKR-PE-WcU" secondAttribute="centerY" id="cOR-nq-TXW"/>
                                                 <constraint firstItem="ZoP-Fh-iLg" firstAttribute="leading" secondItem="GKR-PE-WcU" secondAttribute="leading" constant="10" id="dXi-Dc-d30"/>
                                                 <constraint firstItem="ZoP-Fh-iLg" firstAttribute="centerY" secondItem="GKR-PE-WcU" secondAttribute="centerY" id="emL-mH-IYC"/>
-                                                <constraint firstItem="9UQ-pF-EJz" firstAttribute="leading" secondItem="gYE-1L-BeC" secondAttribute="trailing" constant="30" id="jP6-TQ-JaW"/>
-                                                <constraint firstItem="Wtm-dY-Bwa" firstAttribute="width" secondItem="DoZ-AR-bz4" secondAttribute="width" id="lvp-0U-UFa"/>
-                                                <constraint firstItem="9UQ-pF-EJz" firstAttribute="centerY" secondItem="GKR-PE-WcU" secondAttribute="centerY" id="o4G-6X-Est"/>
-                                                <constraint firstItem="gYE-1L-BeC" firstAttribute="width" secondItem="Wtm-dY-Bwa" secondAttribute="width" id="pCC-ai-Xwv"/>
-                                                <constraint firstItem="9UQ-pF-EJz" firstAttribute="width" secondItem="gYE-1L-BeC" secondAttribute="width" id="rfI-Wt-jaG"/>
-                                                <constraint firstItem="9UQ-pF-EJz" firstAttribute="height" secondItem="gYE-1L-BeC" secondAttribute="height" id="wse-7U-7dD"/>
-                                                <constraint firstItem="Wtm-dY-Bwa" firstAttribute="leading" secondItem="DoZ-AR-bz4" secondAttribute="trailing" constant="30" id="xcg-pR-1gG"/>
+                                                <constraint firstItem="Wtm-dY-Bwa" firstAttribute="leading" secondItem="DoZ-AR-bz4" secondAttribute="trailing" constant="10" id="fGG-cR-a2s"/>
+                                                <constraint firstAttribute="trailing" secondItem="9UQ-pF-EJz" secondAttribute="trailing" constant="15" id="fhm-SC-g8T"/>
+                                                <constraint firstItem="gYE-1L-BeC" firstAttribute="leading" secondItem="Wtm-dY-Bwa" secondAttribute="trailing" constant="10" id="qWN-iq-X9P"/>
                                             </constraints>
                                         </view>
                                     </subviews>
-                                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstItem="6Hk-BE-3tY" firstAttribute="leading" secondItem="5ea-op-5fn" secondAttribute="leading" id="4r3-5A-HKa"/>
-                                        <constraint firstItem="9UQ-pF-EJz" firstAttribute="trailing" secondItem="IgS-Vi-Whi" secondAttribute="trailing" id="6jq-bm-FEL"/>
-                                        <constraint firstItem="xBg-l8-4tQ" firstAttribute="leading" secondItem="5ea-op-5fn" secondAttribute="leading" id="8Hy-Ze-1bb"/>
-                                        <constraint firstItem="kN9-yB-igo" firstAttribute="leading" secondItem="5ea-op-5fn" secondAttribute="leading" id="E2h-Pu-56E"/>
-                                        <constraint firstItem="kN9-yB-igo" firstAttribute="top" secondItem="6Hk-BE-3tY" secondAttribute="bottom" id="Glh-Rg-NMN"/>
                                         <constraint firstItem="GKR-PE-WcU" firstAttribute="leading" secondItem="5ea-op-5fn" secondAttribute="leading" id="PJ9-Ps-SFo"/>
                                         <constraint firstItem="ZMM-G8-mdG" firstAttribute="leading" secondItem="5ea-op-5fn" secondAttribute="leading" id="QdK-xe-Nnf"/>
-                                        <constraint firstItem="GKR-PE-WcU" firstAttribute="top" secondItem="kN9-yB-igo" secondAttribute="bottom" id="VoH-30-BMA"/>
+                                        <constraint firstItem="GKR-PE-WcU" firstAttribute="top" secondItem="6Hk-BE-3tY" secondAttribute="bottom" constant="8" id="d2b-Sj-BIH"/>
                                         <constraint firstAttribute="trailing" secondItem="6Hk-BE-3tY" secondAttribute="trailing" id="eGM-9V-tR8"/>
-                                        <constraint firstAttribute="trailing" secondItem="kN9-yB-igo" secondAttribute="trailing" id="eWn-mE-mq4"/>
+                                        <constraint firstItem="6Hk-BE-3tY" firstAttribute="top" secondItem="ZMM-G8-mdG" secondAttribute="bottom" constant="8" id="f3v-NZ-HWQ"/>
                                         <constraint firstAttribute="trailing" secondItem="ZMM-G8-mdG" secondAttribute="trailing" id="fDW-ge-05x"/>
                                         <constraint firstItem="ZMM-G8-mdG" firstAttribute="top" secondItem="5ea-op-5fn" secondAttribute="top" id="k2x-Pk-Wxl"/>
-                                        <constraint firstAttribute="trailing" secondItem="xBg-l8-4tQ" secondAttribute="trailing" id="l0Y-Pl-pOZ"/>
                                         <constraint firstAttribute="trailing" secondItem="GKR-PE-WcU" secondAttribute="trailing" id="lcR-MD-pr8"/>
-                                        <constraint firstItem="xBg-l8-4tQ" firstAttribute="top" secondItem="ZMM-G8-mdG" secondAttribute="bottom" id="obg-GK-v5j"/>
-                                        <constraint firstItem="6Hk-BE-3tY" firstAttribute="top" secondItem="xBg-l8-4tQ" secondAttribute="bottom" id="r0I-Ew-rmA"/>
                                         <constraint firstAttribute="height" constant="370" id="vkc-Gq-BjN"/>
                                     </constraints>
                                 </view>
@@ -261,14 +231,14 @@
         </view>
     </objects>
     <resources>
-        <image name="green_select" width="15" height="15"/>
-        <image name="green_unselect" width="15" height="15"/>
+        <image name="publish_note_green_select" width="40" height="40"/>
+        <image name="publish_note_green_unselect" width="40" height="40"/>
         <image name="publish_note_pic" width="345" height="130"/>
-        <image name="purple_select" width="15" height="15"/>
-        <image name="purple_unselect" width="15" height="15"/>
-        <image name="red_select" width="15" height="15"/>
-        <image name="red_unselect" width="15" height="15"/>
-        <image name="yellow_select" width="15" height="15"/>
-        <image name="yellow_unselect" width="15" height="15"/>
+        <image name="publish_note_purole_select" width="40" height="40"/>
+        <image name="publish_note_purole_unselect" width="40" height="40"/>
+        <image name="publish_note_red_select" width="40" height="40"/>
+        <image name="publish_note_red_unselect" width="40" height="40"/>
+        <image name="publish_note_yellow_select" width="40" height="40"/>
+        <image name="publish_note_yellow_unselect" width="40" height="40"/>
     </resources>
 </document>

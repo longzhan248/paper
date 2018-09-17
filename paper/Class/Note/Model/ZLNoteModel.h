@@ -21,6 +21,10 @@
 @property (nonatomic,copy) NSData *imgData;
 @property (nonatomic,copy) NSString *ctime;
 
+// 图片的宽高度
+@property (nonatomic,assign) float width;
+@property (nonatomic,assign) float height;
+
 // 预留字段
 @property (nonatomic,copy) NSString *title;
 
