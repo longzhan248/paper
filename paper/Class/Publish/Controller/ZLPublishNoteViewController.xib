@@ -81,7 +81,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Hk-BE-3tY">
                                             <rect key="frame" x="0.0" y="158" width="375" height="150"/>
                                             <subviews>
-                                                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="my_qidian" translatesAutoresizingMaskIntoConstraints="NO" id="IgS-Vi-Whi">
+                                                <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="publish_note_pic" translatesAutoresizingMaskIntoConstraints="NO" id="IgS-Vi-Whi">
                                                     <rect key="frame" x="10" y="0.0" width="355" height="150"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="boolean" keyPath="clipsToBounds" value="YES"/>
@@ -263,7 +263,7 @@
     <resources>
         <image name="green_select" width="15" height="15"/>
         <image name="green_unselect" width="15" height="15"/>
-        <image name="my_qidian" width="1125" height="510"/>
+        <image name="publish_note_pic" width="345" height="130"/>
         <image name="purple_select" width="15" height="15"/>
         <image name="purple_unselect" width="15" height="15"/>
         <image name="red_select" width="15" height="15"/>
