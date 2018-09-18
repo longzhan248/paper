@@ -16,11 +16,13 @@
     ZLNoteCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"ZLNoteCell" owner:self options:nil] lastObject];
-        cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
-        cell.selectedBackgroundView.backgroundColor = kUIColorFromRGB(LINE_COLOR);
-        cell.highlighted = NO;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
     return cell;
+}
+
+- (void)awakeFromNib {
+    [super awakeFromNib];
 }
 
 - (void)setFrame:(CGRect)frame
@@ -43,6 +45,9 @@
     }else if (noteModel.colorTag==3){
         _leftBgLable.backgroundColor = NOTE_PURPLE;
     }
+    
+    NSDate *date = [NSDate dateWithTimeIntervalSince1970:[noteModel.ctime doubleValue]];
+    _dayTimeLabel.text = [CommonUtil compareDate:date];
 }
 
 @end

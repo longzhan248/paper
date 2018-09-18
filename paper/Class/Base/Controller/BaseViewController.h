@@ -15,6 +15,8 @@
 
 @property(nonatomic, assign) BOOL isRight;
 
+- (UIImage *)screenShot;
+
 @property(nonatomic, assign) BOOL isRightButton;
 @property(nonatomic, assign) BOOL isBackButton;
 

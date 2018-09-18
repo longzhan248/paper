@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A05305662150FD1200FFD7A7 /* ZLNoteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05305642150FD1200FFD7A7 /* ZLNoteDetailViewController.m */; };
+		A05305672150FD1200FFD7A7 /* ZLNoteDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05305652150FD1200FFD7A7 /* ZLNoteDetailViewController.xib */; };
+		A053056A2151309A00FFD7A7 /* NSString+ZLSizeLab.m in Sources */ = {isa = PBXBuildFile; fileRef = A05305692151309A00FFD7A7 /* NSString+ZLSizeLab.m */; };
 		A07D737F214DB83D006749CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D737E214DB83D006749CD /* AppDelegate.m */; };
 		A07D7382214DB83E006749CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D7381214DB83E006749CD /* ViewController.m */; };
 		A07D7385214DB83E006749CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07D7383214DB83E006749CD /* Main.storyboard */; };
@@ -128,6 +131,11 @@
 		2117A67AF783258375A84ACA /* Pods-paper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paper.release.xcconfig"; path = "Pods/Target Support Files/Pods-paper/Pods-paper.release.xcconfig"; sourceTree = "<group>"; };
 		21CA42BC667E8F1E55BAD79A /* Pods-paper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paper/Pods-paper.debug.xcconfig"; sourceTree = "<group>"; };
 		3AD2F18FBF98AB8A85D35C7E /* Pods_paper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A05305632150FD1200FFD7A7 /* ZLNoteDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLNoteDetailViewController.h; sourceTree = "<group>"; };
+		A05305642150FD1200FFD7A7 /* ZLNoteDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLNoteDetailViewController.m; sourceTree = "<group>"; };
+		A05305652150FD1200FFD7A7 /* ZLNoteDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLNoteDetailViewController.xib; sourceTree = "<group>"; };
+		A05305682151309A00FFD7A7 /* NSString+ZLSizeLab.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+ZLSizeLab.h"; sourceTree = "<group>"; };
+		A05305692151309A00FFD7A7 /* NSString+ZLSizeLab.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZLSizeLab.m"; sourceTree = "<group>"; };
 		A07D737A214DB83D006749CD /* paper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07D737D214DB83D006749CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A07D737E214DB83D006749CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -640,6 +648,9 @@
 				A07D7422214DC7FD006749CD /* ZLNoteViewController.h */,
 				A07D7423214DC7FD006749CD /* ZLNoteViewController.m */,
 				A07D7424214DC7FD006749CD /* ZLNoteViewController.xib */,
+				A05305632150FD1200FFD7A7 /* ZLNoteDetailViewController.h */,
+				A05305642150FD1200FFD7A7 /* ZLNoteDetailViewController.m */,
+				A05305652150FD1200FFD7A7 /* ZLNoteDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -804,6 +815,8 @@
 				A07D73E1214DBD20006749CD /* UIView+ZLAdditions.m */,
 				A07D74E3214E8523006749CD /* NSAttributedString+ZLSizeLab.h */,
 				A07D74E4214E8523006749CD /* NSAttributedString+ZLSizeLab.m */,
+				A05305682151309A00FFD7A7 /* NSString+ZLSizeLab.h */,
+				A05305692151309A00FFD7A7 /* NSString+ZLSizeLab.m */,
 				A07D74E6214E8555006749CD /* UIDevice+ZLLigs.h */,
 				A07D74E7214E8555006749CD /* UIDevice+ZLLigs.m */,
 			);
@@ -1033,6 +1046,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A05305672150FD1200FFD7A7 /* ZLNoteDetailViewController.xib in Resources */,
 				A07D7498214DDF6E006749CD /* MLInputDodger.bundle in Resources */,
 				A07D747C214DDA59006749CD /* TuSDK.strings in Resources */,
 				A07D747D214DDA59006749CD /* TuSDK.bundle in Resources */,
@@ -1188,6 +1202,7 @@
 				A07D7404214DC3C7006749CD /* BaseNavigationController.m in Sources */,
 				A07D74B2214E0185006749CD /* CustomPopList.m in Sources */,
 				A07D73E2214DBD20006749CD /* UIView+ZLAdditions.m in Sources */,
+				A053056A2151309A00FFD7A7 /* NSString+ZLSizeLab.m in Sources */,
 				A07D73FB214DC2D8006749CD /* BaseModel.m in Sources */,
 				A07D7434214DCA30006749CD /* ZLPublishModel.m in Sources */,
 				A07D74B5214E01AE006749CD /* CustomPhotoViewController.m in Sources */,
@@ -1202,6 +1217,7 @@
 				A07D7464214DD2A0006749CD /* UIColor+ImageGetColor.m in Sources */,
 				A07D7490214DDDDB006749CD /* UIKeyboardView.m in Sources */,
 				A07D748C214DDD90006749CD /* CustomTextView.m in Sources */,
+				A05305662150FD1200FFD7A7 /* ZLNoteDetailViewController.m in Sources */,
 				A07D74AC214E0086006749CD /* ExtendEditTurnAndCutView.m in Sources */,
 				A07D7478214DD6E3006749CD /* ZLFutureViewController.m in Sources */,
 				A07D744F214DCAC9006749CD /* ZLSettingView.m in Sources */,

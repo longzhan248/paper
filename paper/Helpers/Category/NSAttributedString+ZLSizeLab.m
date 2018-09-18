@@ -17,6 +17,7 @@
     //UIDevic的类别，用来判断是否是iOS7
     if ([UIDevice isIOS7]) {
         //iOS7计算文字高度的方法。
+        //        bounds = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
         bounds = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin context:nil];
         
     }else if ([UIDevice isIOS8]){
@@ -27,6 +28,7 @@
     else {
         //iOS6计算文字高度的方法。
         
+        //        bounds.size = [self sizeWithFont:font constrainedToSize:CGSizeMake(width, MAXFLOAT)];
     }
     
     //float，向上取整 :10.3 ===> 11
@@ -37,7 +39,7 @@
     
     // 2014-09-17 07:11:08
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    //时间格式要一致
+    //时间格式要一侄
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSDate* createdAtDate = [dateFormatter dateFromString:createdAt];
     [dateFormatter setDateFormat:@"MM-dd"];

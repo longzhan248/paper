@@ -33,7 +33,6 @@
     FMDBManager *manager;
 }
 
-@property (nonatomic, strong) ZLNoteModel *noteModel;
 @property (nonatomic, strong) CustomAlbum *customAlbum;
 
 @property (weak, nonatomic) IBOutlet PlaceholderTextView *textView;
@@ -236,7 +235,8 @@
 
 #pragma mark - 选择标签颜色  0.green 1.red 2.yellow 3.purple
 - (IBAction)tagAction:(RadioButton *)sender {
-    colorTag = (int)sender.tag;
+    isSelectTag = YES;
+    colorTag = (int)sender.tag-10;
 }
 
 @end

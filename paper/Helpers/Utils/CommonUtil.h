@@ -41,6 +41,8 @@ typedef void (^buttonBlock)(UIButton *button);
 + (void)date;
 + (NSString*)dateChangeFormatAt:(NSString *)createdAt;
 
++ (NSString *)compareDate:(NSDate *)date;
+
 - (NSAttributedString *)labelContent:(NSString *)content;
 
 - (NSAttributedString *)labelInteractContent:(NSString *)content;

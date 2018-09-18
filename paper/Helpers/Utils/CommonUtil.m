@@ -260,6 +260,38 @@
     return string;
 }
 
++ (NSString *)compareDate:(NSDate *)date {
+    
+    NSTimeInterval secondsPerDay = 24 * 60 * 60;
+    NSDate *today = [[NSDate alloc] init];
+    NSDate *tomorrow, *yesterday;
+    
+    tomorrow = [today dateByAddingTimeInterval: secondsPerDay];
+    yesterday = [today dateByAddingTimeInterval: -secondsPerDay];
+    
+    // 10 first characters of description is the calendar date:
+    NSString * todayString = [[today description] substringToIndex:10];
+    NSString * yesterdayString = [[yesterday description] substringToIndex:10];
+    NSString * tomorrowString = [[tomorrow description] substringToIndex:10];
+    
+    NSString * dateString = [[date description] substringToIndex:10];
+    
+    if ([dateString isEqualToString:todayString])
+    {
+        return @"今天";
+    } else if ([dateString isEqualToString:yesterdayString])
+    {
+        return @"昨天";
+    }else if ([dateString isEqualToString:tomorrowString])
+    {
+        return @"明天";
+    }
+    else
+    {
+        return dateString;
+    }
+}
+
 + (void)date{
     
     NSDate *nowDate = [NSDate date];    //这是当前的时间，其实这里可以是任意时间

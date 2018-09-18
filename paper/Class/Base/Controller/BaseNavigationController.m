@@ -41,7 +41,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.screenShotsList = [[NSMutableArray alloc]initWithCapacity:2];
+        self.screenShotsList = [[NSMutableArray alloc] initWithCapacity:2];
         self.canDragBack = YES;
     }
     return self;
@@ -62,15 +62,25 @@
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     
-    if ([[otherGestureRecognizer.view class] isSubclassOfClass:[UITableView class]]) {
-        return NO;
-    }
-    
-    if( [[otherGestureRecognizer.view class] isSubclassOfClass:[UITableViewCell class]] ||
-       [NSStringFromClass([otherGestureRecognizer.view class]) isEqualToString:@"UITableViewCellScrollView"] ||
-       [NSStringFromClass([otherGestureRecognizer.view class]) isEqualToString:@"UITableViewWrapperView"]) {
+    if (IOS11_OR_LATER) {
+        if (self.viewControllers.count > 1) {
+            return NO;
+        } else {
+            if( [[otherGestureRecognizer.view class] isSubclassOfClass:[UITableViewCell class]]||[NSStringFromClass([otherGestureRecognizer.view class]) isEqualToString:@"UITableViewCellContentView"]||[[otherGestureRecognizer.view class] isSubclassOfClass:[UITableView class]]){
+                return YES;
+            }
+        }
+    } else {
+        if ([[otherGestureRecognizer.view class] isSubclassOfClass:[UITableView class]]) {
+            return NO;
+        }
         
-        return YES;
+        if( [[otherGestureRecognizer.view class] isSubclassOfClass:[UITableViewCell class]] ||
+           [NSStringFromClass([otherGestureRecognizer.view class]) isEqualToString:@"UITableViewCellScrollView"] ||
+           [NSStringFromClass([otherGestureRecognizer.view class]) isEqualToString:@"UITableViewWrapperView"]) {
+            
+            return YES;
+        }
     }
     return NO;
 }

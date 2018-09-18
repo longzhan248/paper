@@ -10,7 +10,15 @@
 #import "ZLNoteCell.h"
 #import "ZLNoteModel.h"
 
+@protocol deleteUpdateDelegate <NSObject>
+
+- (void)updateDelete;
+
+@end
+
 @interface ZLNoteTableView : BaseTableView
+
+@property (nonatomic,weak) id <deleteUpdateDelegate> deleteDelegate;
 
 @property (nonatomic,strong) ZLNoteCell *noteCell;
 

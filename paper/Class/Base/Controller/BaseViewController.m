@@ -7,6 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#define kRotationDuration 8.0
+
+#define NavBarFrame self.navigationController.navigationBar.frame
 
 @interface BaseViewController ()
 
@@ -39,7 +42,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
     self.view.backgroundColor = kUIColorFromRGB(BG_COLOR);
     [self navigationBackView];
 }

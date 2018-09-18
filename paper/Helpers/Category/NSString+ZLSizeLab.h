@@ -1,14 +1,16 @@
 //
-//  NSAttributedString+ZLSizeLab.h
+//  NSString+ZLSizeLab.h
 //  paper
 //
-//  Created by 詹龙 on 2018/9/16.
+//  Created by 詹龙 on 2018/9/18.
 //  Copyright © 2018年 longzhan. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface NSAttributedString (ZLSizeLab)
+NS_ASSUME_NONNULL_BEGIN
+
+@interface NSString (ZLSizeLab)
 
 /**
  *  计算一个字符串在限定的宽度和字体下的长度
@@ -18,8 +20,10 @@
  *
  *  @return 字符串的长度
  */
+- (CGSize)heightWithFont:(UIFont* )font width:(CGFloat)width;
 
-- (CGSize)heightWithLabelWidth:(CGFloat)width;
-- (NSString *)setCreatedDateFormatAt:(NSString *)createdAt;
+- (NSAttributedString *)LabelContent:(NSString *)content;
 
 @end
+
+NS_ASSUME_NONNULL_END

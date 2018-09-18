@@ -15,10 +15,9 @@
 
 @property (nonatomic, strong) ZLNoteModel *noteModel;
 
-@property (nonatomic,strong) UIColor *leftColor;
-
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contentLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dayTimeLabel;
 
 @property (weak, nonatomic) IBOutlet UIView *noteBgView;
 @property (weak, nonatomic) IBOutlet UILabel *leftBgLable;

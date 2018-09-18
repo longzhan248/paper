@@ -11,6 +11,8 @@
 
 #define ALPHANUM @"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
 
+#define IOS11_OR_LATER ([[[UIDevice currentDevice] systemVersion] floatValue] >= 11.0)
+
 #define IS_IPAD     [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad
 
 //iPhone4
@@ -53,6 +55,8 @@
 #define NOTEBGCELL_HEIGHT           75
 
 #define NOTEBGCELL_PADDING_HEIGHT   8
+
+#define LEFT_PADDING_HEIGHT         15
 
 //图片资源
 #define TB_NOTE                          @"tabbar_icon_memo_unselect"

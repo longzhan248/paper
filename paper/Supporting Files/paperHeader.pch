@@ -22,6 +22,8 @@
 #import "CommonUtil.h"
 
 #import <Masonry/Masonry.h>
+#import "NSString+ZLSizeLab.h"
+#import "NSAttributedString+ZLSizeLab.h"
 
 #import "FMDBManager.h"
 #import "FMResultSet.h"

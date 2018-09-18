@@ -1,8 +1,8 @@
 //
-//  ZLPublishNoteViewController.h
+//  ZLNoteDetailViewController.h
 //  paper
 //
-//  Created by 詹龙 on 2018/9/16.
+//  Created by 詹龙 on 2018/9/18.
 //  Copyright © 2018年 longzhan. All rights reserved.
 //
 
@@ -10,8 +10,12 @@
 
 @class ZLNoteModel;
 
-@interface ZLPublishNoteViewController : BaseViewController
+NS_ASSUME_NONNULL_BEGIN
+
+@interface ZLNoteDetailViewController : BaseViewController
 
 @property (nonatomic, strong) ZLNoteModel *noteModel;
 
 @end
+
+NS_ASSUME_NONNULL_END
