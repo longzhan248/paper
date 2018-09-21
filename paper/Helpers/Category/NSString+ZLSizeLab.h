@@ -20,9 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return 字符串的长度
  */
-- (CGSize)heightWithFont:(UIFont* )font width:(CGFloat)width;
+- (CGSize)zl_heightWithFont:(UIFont* )font width:(CGFloat)width;
 
-- (NSAttributedString *)LabelContent:(NSString *)content;
+- (NSAttributedString *)zl_LabelContent:(NSString *)content;
 
 @end
 

@@ -10,8 +10,8 @@
 
 @interface UIDevice (ZLLigs)
 
-+ (BOOL)isIOS6;
-+ (BOOL)isIOS7;
-+ (BOOL)isIOS8;
++ (BOOL)zl_isIOS6;
++ (BOOL)zl_isIOS7;
++ (BOOL)zl_isIOS8;
 
 @end

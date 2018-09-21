@@ -10,6 +10,6 @@
 
 @interface UIView (ZLAdditions)
 
-- (BaseViewController *)viewController;
+- (BaseViewController *)zl_viewController;
 
 @end

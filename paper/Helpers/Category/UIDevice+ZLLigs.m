@@ -11,7 +11,7 @@
 @implementation UIDevice (ZLLigs)
 
 #pragma mark - Public
-+ (BOOL)isIOS6 {
++ (BOOL)zl_isIOS6 {
     static BOOL isIOS6 = NO;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -20,7 +20,7 @@
     
     return isIOS6;
 }
-+ (BOOL)isIOS7 {
++ (BOOL)zl_isIOS7 {
     static BOOL isIOS7 = NO;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -29,7 +29,7 @@
     
     return isIOS7;
 }
-+ (BOOL)isIOS8 {
++ (BOOL)zl_isIOS8 {
     static BOOL isIOS8 = NO;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{

@@ -11,16 +11,16 @@
 
 @implementation NSAttributedString (ZLSizeLab)
 
-- (CGSize)heightWithLabelWidth:(CGFloat)width {
+- (CGSize)zl_heightWithLabelWidth:(CGFloat)width {
     CGRect bounds = CGRectZero;
     
     //UIDevic的类别，用来判断是否是iOS7
-    if ([UIDevice isIOS7]) {
+    if ([UIDevice zl_isIOS7]) {
         //iOS7计算文字高度的方法。
         //        bounds = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
         bounds = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin context:nil];
         
-    }else if ([UIDevice isIOS8]){
+    }else if ([UIDevice zl_isIOS8]){
         
         bounds = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin context:nil];
         
@@ -34,9 +34,10 @@
     //float，向上取整 :10.3 ===> 11
     return bounds.size;
 }
-- (NSString*)setCreatedDateFormatAt:(NSString *)createdAt
+
+
+- (NSString *)zl_setCreatedDateFormatAt:(NSString *)createdAt
 {
-    
     // 2014-09-17 07:11:08
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     //时间格式要一侄

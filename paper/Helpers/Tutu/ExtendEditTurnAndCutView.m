@@ -43,7 +43,7 @@
 {
     //    [CommonUtil registerNotice:@"cure_img" object:nil];
     //    [self.cutDelegate editTurnAndCutView:self.editImageView.imageView];
-    [self.viewController.navigationController dismissModalViewControllerAnimated];
+    [self.zl_viewController.navigationController dismissModalViewControllerAnimated];
     //    [self.editImageView changeImage:lsqImageChangeTurnRight];
 }
 @end

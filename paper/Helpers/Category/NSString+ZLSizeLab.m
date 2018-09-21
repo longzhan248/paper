@@ -13,15 +13,15 @@
 
 @implementation NSString (ZLSizeLab)
 
-- (CGSize)heightWithFont:(UIFont* )font width:(CGFloat)width {
+- (CGSize)zl_heightWithFont:(UIFont* )font width:(CGFloat)width {
     CGRect bounds = CGRectZero;
     
     //UIDevic的类别，用来判断是否是iOS7
-    if ([UIDevice isIOS7]) {
+    if ([UIDevice zl_isIOS7]) {
         //iOS7计算文字高度的方法。
         bounds = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
         
-    }else if ([UIDevice isIOS8]){
+    }else if ([UIDevice zl_isIOS8]){
         
         bounds = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:font} context:nil];
         
@@ -36,7 +36,7 @@
     return bounds.size;
 }
 
-- (NSAttributedString *)LabelContent:(NSString *)content{
+- (NSAttributedString *)zl_LabelContent:(NSString *)content{
     
     NSMutableParagraphStyle * paragraphStyle = [[NSMutableParagraphStyle alloc] init];
     paragraphStyle.lineBreakMode = NSLineBreakByCharWrapping;

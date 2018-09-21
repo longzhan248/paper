@@ -15,7 +15,7 @@
 #import "ZLSettingViewController.h"
 
 #import "ZLPublishNoteViewController.h"
-
+#import "ZLSelectDayViewController.h"
 
 @interface ZLMainTabBarController ()
 
@@ -80,8 +80,13 @@
 {
     NSString *firstIndex = [notification object];
     if ([firstIndex isEqualToString:@"0"]) {
-        ZLPublishNoteViewController *markDown = [[ZLPublishNoteViewController alloc] init];
-        BaseNavigationController *baseNav = [[BaseNavigationController alloc] initWithRootViewController:markDown];
+        ZLPublishNoteViewController *noteCtrl = [[ZLPublishNoteViewController alloc] init];
+        BaseNavigationController *baseNav = [[BaseNavigationController alloc] initWithRootViewController:noteCtrl];
+        baseNav.canDragBack = NO;
+        [self presentViewController:baseNav animated:YES completion:nil];
+    } else if ([firstIndex isEqualToString:@"1"]) {
+        ZLSelectDayViewController *selectDayCtrl = [[ZLSelectDayViewController alloc] init];
+        BaseNavigationController *baseNav = [[BaseNavigationController alloc] initWithRootViewController:selectDayCtrl];
         baseNav.canDragBack = NO;
         [self presentViewController:baseNav animated:YES completion:nil];
     }

@@ -44,7 +44,7 @@
     // 获取便签内容的高度
     NSString *content = _noteModel.content;
     content = [content stringByReplacingOccurrencesOfString:@"\r" withString:@""];
-    CGFloat height = [[content LabelContent:content] heightWithLabelWidth:ScreenWidth-LEFT_PADDING_HEIGHT*2].height;
+    CGFloat height = [[content zl_LabelContent:content] zl_heightWithLabelWidth:ScreenWidth-LEFT_PADDING_HEIGHT*2].height;
     
     //便签内容Label
     contentLabel = [[UILabel alloc] initWithFrame:CGRectMake(LEFT_PADDING_HEIGHT, 20, ScreenWidth-LEFT_PADDING_HEIGHT*2, height)];
@@ -52,7 +52,7 @@
     contentLabel.textColor = kUIColorFromRGB(BLACK);
     contentLabel.lineBreakMode = NSLineBreakByWordWrapping;
     contentLabel.numberOfLines = 0;
-    contentLabel.attributedText = [content LabelContent:content];
+    contentLabel.attributedText = [content zl_LabelContent:content];
     [scrollView addSubview:contentLabel];
     
     //便签图片，换一种布局方式和图片contentMode来显示

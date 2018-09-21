@@ -19,7 +19,7 @@
  *  @return 字符串的长度
  */
 
-- (CGSize)heightWithLabelWidth:(CGFloat)width;
-- (NSString *)setCreatedDateFormatAt:(NSString *)createdAt;
+- (CGSize)zl_heightWithLabelWidth:(CGFloat)width;
+- (NSString *)zl_setCreatedDateFormatAt:(NSString *)createdAt;
 
 @end

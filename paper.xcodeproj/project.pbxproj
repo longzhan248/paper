@@ -7,9 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A026D453215496FA0070ACAA /* ZLSelectDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A026D451215496FA0070ACAA /* ZLSelectDayViewController.m */; };
+		A026D454215496FA0070ACAA /* ZLSelectDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026D452215496FA0070ACAA /* ZLSelectDayViewController.xib */; };
 		A05305662150FD1200FFD7A7 /* ZLNoteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05305642150FD1200FFD7A7 /* ZLNoteDetailViewController.m */; };
 		A05305672150FD1200FFD7A7 /* ZLNoteDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05305652150FD1200FFD7A7 /* ZLNoteDetailViewController.xib */; };
 		A053056A2151309A00FFD7A7 /* NSString+ZLSizeLab.m in Sources */ = {isa = PBXBuildFile; fileRef = A05305692151309A00FFD7A7 /* NSString+ZLSizeLab.m */; };
+		A0783D552154E31E0028E346 /* ZLSelectCapsuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0783D532154E31E0028E346 /* ZLSelectCapsuleViewController.m */; };
+		A0783D562154E31E0028E346 /* ZLSelectCapsuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0783D542154E31E0028E346 /* ZLSelectCapsuleViewController.xib */; };
+		A0783D5A2154E4280028E346 /* ZLPublishCapsuleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0783D582154E4280028E346 /* ZLPublishCapsuleViewController.m */; };
+		A0783D5B2154E4280028E346 /* ZLPublishCapsuleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0783D592154E4280028E346 /* ZLPublishCapsuleViewController.xib */; };
+		A0783D5F2154E5880028E346 /* XHDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0783D5E2154E5880028E346 /* XHDatePickerView.m */; };
+		A0783D612154E5A20028E346 /* XHDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0783D602154E5A20028E346 /* XHDatePickerView.xib */; };
+		A0783D642154E65B0028E346 /* NSDate+ZLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A0783D632154E65B0028E346 /* NSDate+ZLExtension.m */; };
+		A0783D672154E7060028E346 /* UIView+ZLExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A0783D662154E7060028E346 /* UIView+ZLExtension.m */; };
 		A07D737F214DB83D006749CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D737E214DB83D006749CD /* AppDelegate.m */; };
 		A07D7382214DB83E006749CD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D7381214DB83E006749CD /* ViewController.m */; };
 		A07D7385214DB83E006749CD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A07D7383214DB83E006749CD /* Main.storyboard */; };
@@ -131,11 +141,27 @@
 		2117A67AF783258375A84ACA /* Pods-paper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paper.release.xcconfig"; path = "Pods/Target Support Files/Pods-paper/Pods-paper.release.xcconfig"; sourceTree = "<group>"; };
 		21CA42BC667E8F1E55BAD79A /* Pods-paper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paper/Pods-paper.debug.xcconfig"; sourceTree = "<group>"; };
 		3AD2F18FBF98AB8A85D35C7E /* Pods_paper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A026D450215496FA0070ACAA /* ZLSelectDayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLSelectDayViewController.h; sourceTree = "<group>"; };
+		A026D451215496FA0070ACAA /* ZLSelectDayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLSelectDayViewController.m; sourceTree = "<group>"; };
+		A026D452215496FA0070ACAA /* ZLSelectDayViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLSelectDayViewController.xib; sourceTree = "<group>"; };
 		A05305632150FD1200FFD7A7 /* ZLNoteDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLNoteDetailViewController.h; sourceTree = "<group>"; };
 		A05305642150FD1200FFD7A7 /* ZLNoteDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLNoteDetailViewController.m; sourceTree = "<group>"; };
 		A05305652150FD1200FFD7A7 /* ZLNoteDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLNoteDetailViewController.xib; sourceTree = "<group>"; };
 		A05305682151309A00FFD7A7 /* NSString+ZLSizeLab.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+ZLSizeLab.h"; sourceTree = "<group>"; };
 		A05305692151309A00FFD7A7 /* NSString+ZLSizeLab.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZLSizeLab.m"; sourceTree = "<group>"; };
+		A0783D522154E31E0028E346 /* ZLSelectCapsuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLSelectCapsuleViewController.h; sourceTree = "<group>"; };
+		A0783D532154E31E0028E346 /* ZLSelectCapsuleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLSelectCapsuleViewController.m; sourceTree = "<group>"; };
+		A0783D542154E31E0028E346 /* ZLSelectCapsuleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLSelectCapsuleViewController.xib; sourceTree = "<group>"; };
+		A0783D572154E4280028E346 /* ZLPublishCapsuleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLPublishCapsuleViewController.h; sourceTree = "<group>"; };
+		A0783D582154E4280028E346 /* ZLPublishCapsuleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLPublishCapsuleViewController.m; sourceTree = "<group>"; };
+		A0783D592154E4280028E346 /* ZLPublishCapsuleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLPublishCapsuleViewController.xib; sourceTree = "<group>"; };
+		A0783D5D2154E5880028E346 /* XHDatePickerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XHDatePickerView.h; sourceTree = "<group>"; };
+		A0783D5E2154E5880028E346 /* XHDatePickerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHDatePickerView.m; sourceTree = "<group>"; };
+		A0783D602154E5A20028E346 /* XHDatePickerView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XHDatePickerView.xib; sourceTree = "<group>"; };
+		A0783D622154E65B0028E346 /* NSDate+ZLExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZLExtension.h"; sourceTree = "<group>"; };
+		A0783D632154E65B0028E346 /* NSDate+ZLExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZLExtension.m"; sourceTree = "<group>"; };
+		A0783D652154E7060028E346 /* UIView+ZLExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+ZLExtension.h"; sourceTree = "<group>"; };
+		A0783D662154E7060028E346 /* UIView+ZLExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZLExtension.m"; sourceTree = "<group>"; };
 		A07D737A214DB83D006749CD /* paper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = paper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07D737D214DB83D006749CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A07D737E214DB83D006749CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -376,6 +402,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A0783D5C2154E55F0028E346 /* XHDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				A0783D5D2154E5880028E346 /* XHDatePickerView.h */,
+				A0783D5E2154E5880028E346 /* XHDatePickerView.m */,
+				A0783D602154E5A20028E346 /* XHDatePickerView.xib */,
+			);
+			path = XHDatePicker;
+			sourceTree = "<group>";
+		};
 		A07D7371214DB83D006749CD = {
 			isa = PBXGroup;
 			children = (
@@ -487,6 +523,7 @@
 		A07D73B4214DB95C006749CD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A0783D5C2154E55F0028E346 /* XHDatePicker */,
 				A07D74DF214E81A8006749CD /* FMDB */,
 				A07D74DB214E7FAB006749CD /* TipNotification */,
 				A07D74A5214DFC2E006749CD /* Tutu */,
@@ -717,6 +754,15 @@
 				A07D7481214DDC50006749CD /* ZLPublishNoteViewController.h */,
 				A07D7482214DDC50006749CD /* ZLPublishNoteViewController.m */,
 				A07D7483214DDC50006749CD /* ZLPublishNoteViewController.xib */,
+				A026D450215496FA0070ACAA /* ZLSelectDayViewController.h */,
+				A026D451215496FA0070ACAA /* ZLSelectDayViewController.m */,
+				A026D452215496FA0070ACAA /* ZLSelectDayViewController.xib */,
+				A0783D522154E31E0028E346 /* ZLSelectCapsuleViewController.h */,
+				A0783D532154E31E0028E346 /* ZLSelectCapsuleViewController.m */,
+				A0783D542154E31E0028E346 /* ZLSelectCapsuleViewController.xib */,
+				A0783D572154E4280028E346 /* ZLPublishCapsuleViewController.h */,
+				A0783D582154E4280028E346 /* ZLPublishCapsuleViewController.m */,
+				A0783D592154E4280028E346 /* ZLPublishCapsuleViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -813,12 +859,16 @@
 			children = (
 				A07D73E0214DBD20006749CD /* UIView+ZLAdditions.h */,
 				A07D73E1214DBD20006749CD /* UIView+ZLAdditions.m */,
-				A07D74E3214E8523006749CD /* NSAttributedString+ZLSizeLab.h */,
-				A07D74E4214E8523006749CD /* NSAttributedString+ZLSizeLab.m */,
+				A0783D652154E7060028E346 /* UIView+ZLExtension.h */,
+				A0783D662154E7060028E346 /* UIView+ZLExtension.m */,
 				A05305682151309A00FFD7A7 /* NSString+ZLSizeLab.h */,
 				A05305692151309A00FFD7A7 /* NSString+ZLSizeLab.m */,
+				A07D74E3214E8523006749CD /* NSAttributedString+ZLSizeLab.h */,
+				A07D74E4214E8523006749CD /* NSAttributedString+ZLSizeLab.m */,
 				A07D74E6214E8555006749CD /* UIDevice+ZLLigs.h */,
 				A07D74E7214E8555006749CD /* UIDevice+ZLLigs.m */,
+				A0783D622154E65B0028E346 /* NSDate+ZLExtension.h */,
+				A0783D632154E65B0028E346 /* NSDate+ZLExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1047,15 +1097,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				A05305672150FD1200FFD7A7 /* ZLNoteDetailViewController.xib in Resources */,
+				A0783D562154E31E0028E346 /* ZLSelectCapsuleViewController.xib in Resources */,
 				A07D7498214DDF6E006749CD /* MLInputDodger.bundle in Resources */,
 				A07D747C214DDA59006749CD /* TuSDK.strings in Resources */,
+				A026D454215496FA0070ACAA /* ZLSelectDayViewController.xib in Resources */,
 				A07D747D214DDA59006749CD /* TuSDK.bundle in Resources */,
 				A07D73D6214DBABC006749CD /* zh-Hans.strings in Resources */,
 				A07D7426214DC7FD006749CD /* ZLNoteViewController.xib in Resources */,
+				A0783D5B2154E4280028E346 /* ZLPublishCapsuleViewController.xib in Resources */,
 				A07D740C214DC528006749CD /* BaseTabBarController.xib in Resources */,
 				A07D7419214DC6F7006749CD /* ZLNoteHeaderCell.xib in Resources */,
 				A07D7485214DDC50006749CD /* ZLPublishNoteViewController.xib in Resources */,
 				A07D741E214DC750006749CD /* ZLNoteCell.xib in Resources */,
+				A0783D612154E5A20028E346 /* XHDatePickerView.xib in Resources */,
 				A07D7474214DD6CF006749CD /* ZLEveryDayViewController.xib in Resources */,
 				A07D746F214DD623006749CD /* ZLCapsuleCell.xib in Resources */,
 				A07D74ED214E8A0B006749CD /* EmptyDataCell.xib in Resources */,
@@ -1160,6 +1214,7 @@
 				A07D74A4214DDFA0006749CD /* MLInputDodgerRetractView.m in Sources */,
 				A07D7407214DC48F006749CD /* BaseViewController.m in Sources */,
 				A07D73EB214DBFEF006749CD /* ZLTabBar.m in Sources */,
+				A0783D552154E31E0028E346 /* ZLSelectCapsuleViewController.m in Sources */,
 				A07D7489214DDD1B006749CD /* PlaceholderTextView.m in Sources */,
 				A07D74E2214E81C4006749CD /* FMDBManager.m in Sources */,
 				A07D738D214DB83E006749CD /* main.m in Sources */,
@@ -1168,11 +1223,14 @@
 				A07D74C7214E0361006749CD /* CustomAlbum.m in Sources */,
 				A07D73FE214DC2FB006749CD /* BaseTableView.m in Sources */,
 				A07D737F214DB83D006749CD /* AppDelegate.m in Sources */,
+				A026D453215496FA0070ACAA /* ZLSelectDayViewController.m in Sources */,
 				A07D7449214DCAA7006749CD /* ZLTargetModel.m in Sources */,
 				A07D74C4214E0334006749CD /* CustomAlbumView.m in Sources */,
+				A0783D642154E65B0028E346 /* NSDate+ZLExtension.m in Sources */,
 				A07D7461214DD23D006749CD /* PopMenuModel.m in Sources */,
 				A07D7484214DDC50006749CD /* ZLPublishNoteViewController.m in Sources */,
 				A07D7425214DC7FD006749CD /* ZLNoteViewController.m in Sources */,
+				A0783D5A2154E4280028E346 /* ZLPublishCapsuleViewController.m in Sources */,
 				A07D744C214DCAB6006749CD /* ZLTargetView.m in Sources */,
 				A07D7410214DC685006749CD /* ZLMainTabBarController.m in Sources */,
 				A07D745E214DD207006749CD /* PopMenuButton.m in Sources */,
@@ -1190,6 +1248,7 @@
 				A07D74B8214E023C006749CD /* CustomPhoto.m in Sources */,
 				A07D74E8214E8555006749CD /* UIDevice+ZLLigs.m in Sources */,
 				A07D7421214DC7B6006749CD /* ZLNoteTableView.m in Sources */,
+				A0783D672154E7060028E346 /* UIView+ZLExtension.m in Sources */,
 				A07D73D9214DBBF2006749CD /* JastorRuntimeHelper.m in Sources */,
 				A07D74A8214DFC85006749CD /* TutuSimpleBase.m in Sources */,
 				A07D746A214DD606006749CD /* ZLCapsuleTableView.m in Sources */,
@@ -1203,6 +1262,7 @@
 				A07D74B2214E0185006749CD /* CustomPopList.m in Sources */,
 				A07D73E2214DBD20006749CD /* UIView+ZLAdditions.m in Sources */,
 				A053056A2151309A00FFD7A7 /* NSString+ZLSizeLab.m in Sources */,
+				A0783D5F2154E5880028E346 /* XHDatePickerView.m in Sources */,
 				A07D73FB214DC2D8006749CD /* BaseModel.m in Sources */,
 				A07D7434214DCA30006749CD /* ZLPublishModel.m in Sources */,
 				A07D74B5214E01AE006749CD /* CustomPhotoViewController.m in Sources */,

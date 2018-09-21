@@ -10,7 +10,7 @@
 
 @implementation UIView (ZLAdditions)
 
-- (BaseViewController *)viewController
+- (BaseViewController *)zl_viewController
 {
     //事件响应链 下一个响应者
     UIResponder *next = [self nextResponder];

@@ -37,7 +37,7 @@
     ZLNoteModel *noteModel = [self.data objectAtIndex:indexPath.row];
     ZLNoteDetailViewController *noteDetail = [[ZLNoteDetailViewController alloc] init];
     noteDetail.noteModel = noteModel;
-    [self.viewController.navigationController pushViewController:noteDetail animated:YES];
+    [self.zl_viewController.navigationController pushViewController:noteDetail animated:YES];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
@@ -72,7 +72,7 @@
         ZLPublishNoteViewController *noteCtrl = [[ZLPublishNoteViewController alloc] init];
         noteCtrl.noteModel = noteModel;
         BaseNavigationController *baseNav = [[BaseNavigationController alloc] initWithRootViewController:noteCtrl];
-        [self.viewController presentViewController:baseNav animated:YES completion:nil];
+        [self.zl_viewController presentViewController:baseNav animated:YES completion:nil];
     }];
     moreRowAction.backgroundColor = kUIColorFromRGB(0x61cefe);
     return @[deleteRowAction,moreRowAction];
