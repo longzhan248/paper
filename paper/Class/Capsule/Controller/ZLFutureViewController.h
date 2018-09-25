@@ -7,11 +7,7 @@
 //
 
 #import "BaseViewController.h"
-#import "ZLCapsuleTableView.h"
-
 
 @interface ZLFutureViewController : BaseViewController
-
-@property (nonatomic,strong) ZLCapsuleTableView *capsuleTableView;
 
 @end

@@ -24,7 +24,7 @@ typedef void (^buttonBlock)(UIButton *button);
 + (void)registerNotice:(NSString *)keyString object:(NSObject*)object;
 
 #pragma mark
-+ (NSString*)turnToEmojiTextWithString:(NSString *)string;
++ (NSString *)turnToEmojiTextWithString:(NSString *)string;
 #pragma mark - 时间戳转换时间
 + (NSString *)timeIntervalTurnDate:(NSString *)string;
 + (NSString *)YearMonthIntervalTurnDate:(NSString *)string;
@@ -33,13 +33,15 @@ typedef void (^buttonBlock)(UIButton *button);
 #pragma mark - 获取时间
 + (NSString *)getLocalTime;
 
-+ (NSString*)TimeformatFromSeconds:(int)seconds;
++ (NSString *)TimeformatFromSeconds:(int)seconds;
 
-+ (NSString*)TotalTimeformatFromSeconds:(int)seconds;
++ (NSString *)TotalTimeformatFromSeconds:(int)seconds;
 
-+ (NSString*)changeTime:(NSDate*)onedate toDateString:(NSString*)str;
++ (NSString *)changeTime:(NSDate*)onedate toDateString:(NSString*)str;
 + (void)date;
-+ (NSString*)dateChangeFormatAt:(NSString *)createdAt;
++ (NSString *)dateChangeFormatAt:(NSString *)createdAt;
+
++ (NSString *)getTomorrowDay:(NSDate *)aDate;
 
 + (NSString *)compareDate:(NSDate *)date;
 

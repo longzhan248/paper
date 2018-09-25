@@ -12,6 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ZLPublishCapsuleViewController : BaseViewController
 
+@property (nonatomic, assign) int statusTag;
+
+@property (nonatomic, copy) NSString *futureTime;
+
 @end
 
 NS_ASSUME_NONNULL_END

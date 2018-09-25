@@ -52,6 +52,9 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 #define GRAY            0x666666
 
+#define CAPLUSE_COLOR   0x35566F
+#define DETAIL_COLOR    0x7EAFCC
+
 #define LINE_GRAY       0xdfdfdf
 
 #define NOTE_PURPLE     kUIColorFromRGB(0x845EF0)

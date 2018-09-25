@@ -11,6 +11,9 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ZLSelectDayViewController : BaseViewController
+{
+    NSString *ymdDate;
+}
 
 @end
 

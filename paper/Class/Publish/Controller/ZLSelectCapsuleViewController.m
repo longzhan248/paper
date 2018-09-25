@@ -45,6 +45,8 @@
 - (void)calmAction:(UITapGestureRecognizer *)sender
 {
     ZLPublishCapsuleViewController *publishCapsuleCtrl = [[ZLPublishCapsuleViewController alloc] init];
+    publishCapsuleCtrl.futureTime = _selectTime;
+    publishCapsuleCtrl.statusTag = 0;
     [self.navigationController pushViewController:publishCapsuleCtrl animated:YES];
 }
 
@@ -52,6 +54,8 @@
 - (void)prettyAction:(UITapGestureRecognizer *)sender
 {
     ZLPublishCapsuleViewController *publishCapsuleCtrl = [[ZLPublishCapsuleViewController alloc] init];
+    publishCapsuleCtrl.futureTime = _selectTime;
+    publishCapsuleCtrl.statusTag = 1;
     [self.navigationController pushViewController:publishCapsuleCtrl animated:YES];
 }
 
@@ -59,6 +63,8 @@
 - (void)badAction:(UITapGestureRecognizer *)sender
 {
     ZLPublishCapsuleViewController *publishCapsuleCtrl = [[ZLPublishCapsuleViewController alloc] init];
+    publishCapsuleCtrl.futureTime = _selectTime;
+    publishCapsuleCtrl.statusTag = 2;
     [self.navigationController pushViewController:publishCapsuleCtrl animated:YES];
 }
 

@@ -12,7 +12,6 @@
 @implementation FMDBManager
 {
     FMDatabase *fmdb;
-    
 }
 
 + (FMDBManager *)shareManager {
@@ -35,7 +34,7 @@
         fmdb = [[FMDatabase alloc] initWithPath:fileName];
         if ([fmdb open]) {
             NSLog(@"============成功");
-            [self creatList];
+            [self creatNote];
         }else{
             NSLog(@"------------失败");
         }
@@ -44,7 +43,8 @@
     return self;
 }
 
-- (void)creatList {
+#pragma mark - 创建便签表
+- (void)creatNote {
     BOOL result = [fmdb executeUpdate:@"create table if not exists note(uid varchar ,title varchar,content varchar ,starTag varchar , colorTag varchar , width varchar ,height varchar , imgData blob ,ctime varchar)"];
     if (result) {
         NSLog(@"==========创建表成功");
@@ -53,7 +53,18 @@
     }
 }
 
-- (BOOL)insterDataWithModel:(ZLNoteModel *)model
+#pragma mark - 创建胶囊表
+- (void)createCapsule {
+    BOOL result = [fmdb executeUpdate:@"create table if not exists capsule(uid varchar ,title varchar,content varchar ,statusTag varchar,today varchar,width varchar ,height varchar , imgData blob, cdate varchar,ctime varchar)"];
+    if (result) {
+        NSLog(@"==========创建表成功");
+    }else{
+        NSLog(@"----------失败");
+    }
+}
+
+#pragma mark - 便签表插入数据
+- (BOOL)insertDataWithModel:(ZLNoteModel *)model
 {
     BOOL isSucess = [fmdb executeUpdate:@"insert into note(uid , title , content , starTag , colorTag , width, height, imgData ,ctime) values(?,?,?,?,?,?,?,?,?)",@(model.uid),model.title,model.content,@(model.starTag),@(model.colorTag),@(model.width),@(model.height),model.imgData,model.ctime];
     if (isSucess) {
@@ -64,108 +75,46 @@
     return isSucess;
 }
 
+/// 胶囊model插入数据
+- (BOOL)insertCapsuleDataWithModel:(ZLCapsuleModel *)model {
+    BOOL isSucess = [fmdb executeUpdate:@"insert into capsule(uid , title , content ,statusTag, today , width, height , imgData ,cdate,ctime) values(?,?,?,?,?,?,?,?,?,?)",@(model.uid),model.title,model.content,@(model.statusTag),@(model.today),@(model.width),@(model.height),model.imgData,model.cdate,model.ctime];
+    if (isSucess) {
+        NSLog(@"===========插入数据成功");
+    }else{
+        NSLog(@"-----------失败");
+    }
+    return isSucess;
+}
+
+/// 返回便签查询结果
 - (FMResultSet *)backResults:(NSString *)conditions {
     NSString *querySql = [NSString stringWithFormat:@"select * from %@ ORDER BY ctime desc",conditions];
     return  [fmdb executeQuery:querySql];
 }
 
-- (FMResultSet *)searchResults:(NSString *)conditions
+/// 返回胶囊查询结果
+- (FMResultSet *)backCapsuleResult:(NSString *)conditions today:(int)today {
+    NSString *querySql = [NSString stringWithFormat:@"select * from %@ where today=%d ORDER BY ctime desc", conditions, today];
+    return [fmdb executeQuery:querySql];
+}
+
+/// 返回查询结果
+- (FMResultSet *)selectFind:(NSString *)conditions
 {
-    NSString *querySql = [NSString stringWithFormat:@"select * from app where title like '%%%@%%' ",conditions];
+    NSString *querySql = [NSString stringWithFormat:@"select * from %@ where today=0 ORDER BY ctime desc limit 1",conditions];
     return  [fmdb executeQuery:querySql];
 }
 
-- (FMResultSet *)surveyResults:(NSString *)conditions
-{
-    
-    NSString *querySql = [NSString stringWithFormat:@"select * from %@ ORDER BY tag desc , hour asc",conditions];
-    return  [fmdb executeQuery:querySql];
-}
-
-- (FMResultSet *)lineResults:(NSString *)conditions
-{
-    NSString *querySql = [NSString stringWithFormat:@"select * from %@ ORDER BY monthday desc",conditions];
-    return  [fmdb executeQuery:querySql];
-}
-
-- (FMResultSet *)selectFind:(NSString *)monthday
-{
-    NSString *querySql = [NSString stringWithFormat:@"select * from app where monthday = '%@' ORDER BY tag desc , hour asc",monthday];
-    
-    return  [fmdb executeQuery:querySql];
-}
-
-- (FMResultSet *)selectGroup:(NSString *)category
-{
-    NSString *querySql = [NSString stringWithFormat:@"select * from app where category = '%@' ORDER BY ctime desc",category];
-    
-    return  [fmdb executeQuery:querySql];
-}
-
-- (BOOL)deleteFind:(int)unid {
-    NSString *deleteSql = [NSString stringWithFormat:@"delete from app where uid = %d",unid];
+- (BOOL)deleteFind:(int)uid {
+    NSString *deleteSql = [NSString stringWithFormat:@"delete from note where uid = %d",uid];
     BOOL result = [fmdb executeUpdate:deleteSql];
     return result;
 }
 
+/// 图片格式无法通过此种方式修改，待探究
 - (BOOL)updateFind:(ZLNoteModel *)model
 {
     NSString *updateSql = [NSString stringWithFormat:@"update note set content = '%@', colorTag = %d,width = %f,height = %f,imgData= '%@',ctime = '%@' where uid =%d",model.content,model.colorTag,model.width,model.height,model.imgData,model.ctime,model.uid];
-    
-    BOOL result = [fmdb executeUpdate:updateSql];
-    
-    return result;
-}
-
-- (BOOL)updateImg:(NSData *)imgData unid:(int)unid {
-    NSString *updateSql = @"update app set img = ? where uid = ?";
-    BOOL result = [fmdb executeUpdate:updateSql,imgData,unid];
-    
-    return result;
-}
-
-- (BOOL)updateTag:(int)tag hour:(NSString *)hour {
-    NSString *updateSql = [NSString stringWithFormat:@"update app set tag= %d where hour = '%@'",tag,hour];
-    
-    BOOL result = [fmdb executeUpdate:updateSql];
-    
-    return result;
-}
-
-- (BOOL)updateUid:(int)tag uid:(int)uid {
-    NSString *updateSql = [NSString stringWithFormat:@"update app set tag= %d where uid = '%d'",tag,uid];
-    
-    BOOL result = [fmdb executeUpdate:updateSql];
-    
-    return result;
-}
-
-- (BOOL)updateStick:(int)stick uid:(int)uid {
-    NSString *updateSql = [NSString stringWithFormat:@"update app set stick= %d where uid = '%d'",stick,uid];
-    
-    BOOL result = [fmdb executeUpdate:updateSql];
-    
-    return result;
-}
-
-- (BOOL)updateCategory:(NSString *)category hour:(NSString *)hour {
-    NSString *updateSql = [NSString stringWithFormat:@"update app set category= '%@' where hour = '%@'",category,hour];
-    
-    BOOL result = [fmdb executeUpdate:updateSql];
-    
-    return result;
-}
-
-- (BOOL)updateHour:(int)tag hour:(NSString *)hour date:(NSString *)date uid:(int)uid {
-    NSString *updateSql = [NSString stringWithFormat:@"update app set tag= %d , date='%@' , hour = '%@' where uid = '%d'",tag,date,hour,uid];
-    
-    BOOL result = [fmdb executeUpdate:updateSql];
-    
-    return result;
-}
-
-- (BOOL)updateTime:(int)tag hour:(NSString *)hour date:(NSString *)date monthday:(NSString *)monthday uid:(int)uid {
-    NSString *updateSql = [NSString stringWithFormat:@"update app set tag= %d , date='%@' , hour = '%@' , monthday = '%@' where uid = '%d'",tag,date,hour,monthday,uid];
     
     BOOL result = [fmdb executeUpdate:updateSql];
     

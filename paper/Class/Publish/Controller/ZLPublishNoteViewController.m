@@ -73,6 +73,7 @@
     //选择图片入口添加事件
     UITapGestureRecognizer *selectTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectImg:)];
     [_selectImgView addGestureRecognizer:selectTap];
+    
     if (_noteModel != nil) {
         _textView.placeholder = @"";
         _textView.text = _noteModel.content;
@@ -81,6 +82,7 @@
         } else {
             _selectImgView.image = [UIImage imageWithData:_noteModel.imgData];
         }
+        // 选择标签颜色  0.green 1.red 2.yellow 3.purple
         RadioButton *radioButton = [self.view viewWithTag:10+_noteModel.colorTag];
         radioButton.selected = YES;
     }
@@ -136,12 +138,16 @@
 #pragma mark - 发布事件
 - (void)sendAction:(UIButton *)sender
 {
-    manager = [[FMDBManager alloc] init];
-    [FMDBManager shareManager];
+    manager = [FMDBManager shareManager];
+    [manager createNote];
     if (_noteModel != nil) {
         [self updateDataFMDB];
     } else {
-        [self insertDataFMDB];
+        if (_textView.text == nil || [_textView.text isEqualToString:@""]) {
+            [CommonUtil NotiTip:@"便签内容不能为空" color:TIP_COLOR];
+        } else {
+            [self insertDataFMDB];
+        }
     }
 }
 
@@ -162,7 +168,7 @@
     _noteModel.colorTag = colorTag;
     _noteModel.ctime = ctime;
     _noteModel.imgData = imgData;
-    [manager insterDataWithModel:_noteModel];
+    [manager insertDataWithModel:_noteModel];
     
     [CommonUtil NotiTip:@"便签发布成功" color:SUCCESS_COLOR];
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -197,7 +203,7 @@
     
     // 先删除再插入
     [manager deleteFind:_noteModel.uid];
-    [manager insterDataWithModel:_noteModel];
+    [manager insertDataWithModel:_noteModel];
     
     [CommonUtil NotiTip:@"便签修改成功" color:SUCCESS_COLOR];
     [self dismissViewControllerAnimated:YES completion:nil];

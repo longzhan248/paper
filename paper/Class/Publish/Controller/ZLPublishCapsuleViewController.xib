@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZLPublishCapsuleViewController">
             <connections>
+                <outlet property="numLabel" destination="vgh-lp-oZy" id="c7Z-CO-xWL"/>
+                <outlet property="publishImg" destination="S9y-Th-t38" id="31d-oo-eaJ"/>
                 <outlet property="textView" destination="jg8-na-fam" id="H2C-k6-9SS"/>
                 <outlet property="view" destination="G0G-DU-bh6" id="Qbu-Bb-Uzn"/>
             </connections>

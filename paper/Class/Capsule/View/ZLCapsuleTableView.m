@@ -7,6 +7,13 @@
 //
 
 #import "ZLCapsuleTableView.h"
+#import "ZLCapsuleCell.h"
+
+@interface ZLCapsuleTableView ()
+
+@property (nonatomic,strong) ZLCapsuleCell *capsuleCell;
+
+@end
 
 @implementation ZLCapsuleTableView
 
@@ -14,13 +21,13 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 8;
+    return self.data.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     _capsuleCell = [ZLCapsuleCell cellWithTableView:tableView];
-    
+    _capsuleCell.capsuleModel = self.data[indexPath.row];
     return _capsuleCell;
 }
 

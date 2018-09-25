@@ -7,12 +7,8 @@
 //
 
 #import "BaseTableView.h"
-#import "ZLCapsuleCell.h"
-
 
 @interface ZLCapsuleTableView : BaseTableView
-
-@property (nonatomic,strong) ZLCapsuleCell *capsuleCell;
 
 
 @end

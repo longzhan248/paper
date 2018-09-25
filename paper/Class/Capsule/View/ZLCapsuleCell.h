@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+@class ZLCapsuleModel;
+
 @interface ZLCapsuleCell : UITableViewCell
 
 + (instancetype)cellWithTableView:(UITableView *)tableView;
+
+@property (nonatomic, strong) ZLCapsuleModel *capsuleModel;
 
 @end

@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZLSelectDayViewController">
             <connections>
                 <outlet property="futureView" destination="fiI-Yk-EI0" id="GlK-wP-9bF"/>
+                <outlet property="todayLabel" destination="etz-ez-7RF" id="xvH-zI-TOp"/>
+                <outlet property="todayTipLabel" destination="OjU-wC-5FY" id="Oo6-Ff-1Xs"/>
                 <outlet property="todayView" destination="bdR-C8-CPQ" id="yV7-ik-Sgx"/>
                 <outlet property="view" destination="SET-cv-tx4" id="qM1-eo-ORI"/>
             </connections>

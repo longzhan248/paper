@@ -333,6 +333,18 @@
     
 }
 
+/// 传入今天的时间，返回明天的时间
++ (NSString *)getTomorrowDay:(NSDate *)aDate {
+    NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents *components = [gregorian components:NSCalendarUnitWeekday | NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:aDate];
+    [components setDay:([components day]+1)];
+    
+    NSDate *beginningOfWeek = [gregorian dateFromComponents:components];
+    NSDateFormatter *dateday = [[NSDateFormatter alloc] init];
+    [dateday setDateFormat:@"yyyy-MM-dd"];
+    return [dateday stringFromDate:beginningOfWeek];
+}
+
 #pragma mark - 判断网络状态
 + (BOOL) connectedToNetwork
 {
