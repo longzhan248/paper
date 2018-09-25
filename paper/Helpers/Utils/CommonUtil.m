@@ -137,8 +137,8 @@
 
 + (NSString *)getLocalTime
 {
-    NSDateFormatter*dateFormatter = [[NSDateFormatter alloc]init];
-    [dateFormatter setDateFormat:@"YYYYMMddhhmmss"];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy年MM月dd日"];
     NSString *datestr = [dateFormatter stringFromDate:[NSDate date]];
     
     return datestr;
