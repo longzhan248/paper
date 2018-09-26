@@ -34,7 +34,7 @@
         fmdb = [[FMDatabase alloc] initWithPath:fileName];
         if ([fmdb open]) {
             NSLog(@"============成功");
-            [self creatNote];
+            [self createNote];
         }else{
             NSLog(@"------------失败");
         }
@@ -44,7 +44,7 @@
 }
 
 #pragma mark - 创建便签表
-- (void)creatNote {
+- (void)createNote {
     BOOL result = [fmdb executeUpdate:@"create table if not exists note(uid varchar ,title varchar,content varchar ,starTag varchar , colorTag varchar , width varchar ,height varchar , imgData blob ,ctime varchar)"];
     if (result) {
         NSLog(@"==========创建表成功");
@@ -105,8 +105,8 @@
     return  [fmdb executeQuery:querySql];
 }
 
-- (BOOL)deleteFind:(int)uid {
-    NSString *deleteSql = [NSString stringWithFormat:@"delete from note where uid = %d",uid];
+- (BOOL)deleteFind:(NSString *)conditions uid:(int)uid {
+    NSString *deleteSql = [NSString stringWithFormat:@"delete from %@ where uid = %d",conditions,uid];
     BOOL result = [fmdb executeUpdate:deleteSql];
     return result;
 }

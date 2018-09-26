@@ -202,7 +202,7 @@
     _noteModel.imgData = imgData;
     
     // 先删除再插入
-    [manager deleteFind:_noteModel.uid];
+    [manager deleteFind:@"note" uid:_noteModel.uid];
     [manager insertDataWithModel:_noteModel];
     
     [CommonUtil NotiTip:@"便签修改成功" color:SUCCESS_COLOR];

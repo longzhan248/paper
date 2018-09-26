@@ -57,9 +57,8 @@
     UITableViewRowAction *deleteRowAction;
     UITableViewRowAction *moreRowAction;
     deleteRowAction = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive title:@"删除" handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
-        FMDBManager *manager = [[FMDBManager alloc]init];
-        [FMDBManager shareManager];
-        [manager deleteFind:noteModel.uid];
+        FMDBManager *manager = [FMDBManager shareManager];
+        [manager deleteFind:@"note" uid:noteModel.uid];
         
         [self.data removeObjectAtIndex:indexPath.row];
         [self deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];

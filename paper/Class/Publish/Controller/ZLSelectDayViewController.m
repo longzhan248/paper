@@ -8,6 +8,7 @@
 
 #import "ZLSelectDayViewController.h"
 #import "ZLSelectCapsuleViewController.h"
+#import "ZLPublishCapsuleViewController.h"
 #import "XHDatePickerView.h"
 #import "NSDate+ZLExtension.h"
 
@@ -85,9 +86,10 @@
 
 - (void)futureAction:(UITapGestureRecognizer *)sender {
     XHDatePickerView *datePicker = [[XHDatePickerView alloc] initWithCompleteBlock:^(NSDate *startDate, NSDate *endDate) {
-        ZLSelectCapsuleViewController *selectCapsuleCtrl = [[ZLSelectCapsuleViewController alloc] init];
-        selectCapsuleCtrl.selectTime = ymdDate;
-        [self.navigationController pushViewController:selectCapsuleCtrl animated:YES];
+        ymdDate = [startDate stringWithFormat:@"yyyy年MM月dd日"];
+        ZLPublishCapsuleViewController *publishCapsuleCtrl = [[ZLPublishCapsuleViewController alloc] init];
+        publishCapsuleCtrl.futureTime = ymdDate;
+        [self.navigationController pushViewController:publishCapsuleCtrl animated:YES];
     }];
     
     datePicker.datePickerStyle = DateStyleShowYearMonthDay;

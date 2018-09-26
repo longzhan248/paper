@@ -8,14 +8,15 @@
 
 #import "BaseViewController.h"
 
-NS_ASSUME_NONNULL_BEGIN
+@class ZLCapsuleModel;
 
 @interface ZLPublishCapsuleViewController : BaseViewController
 
 @property (nonatomic, assign) int statusTag;
 
 @property (nonatomic, copy) NSString *futureTime;
+@property (nonatomic, copy) NSString *skip;
+
+@property (nonatomic, strong) ZLCapsuleModel *capsuleModel;
 
 @end
-
-NS_ASSUME_NONNULL_END

@@ -8,6 +8,7 @@
 
 #import "ZLCapsuleTableView.h"
 #import "ZLCapsuleCell.h"
+#import "ZLCapsuleDetailViewController.h"
 
 @interface ZLCapsuleTableView ()
 
@@ -38,7 +39,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    ZLCapsuleModel *capsuleModel = self.data[indexPath.row];
+    ZLCapsuleDetailViewController *capsuleCtrl = [[ZLCapsuleDetailViewController alloc] init];
+    capsuleCtrl.capsuleModel = capsuleModel;
+    [self.zl_viewController presentViewController:capsuleCtrl animated:YES completion:nil];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

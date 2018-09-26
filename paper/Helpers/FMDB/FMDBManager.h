@@ -34,9 +34,10 @@
 
 - (BOOL)deleteData;
 
-- (BOOL)deleteFind:(int)uid;
+/// 删除某一条数据
+- (BOOL)deleteFind:(NSString *)conditions uid:(int)uid;
 
-- (BOOL)updateFind:(ZLNoteModel *) model;
+- (BOOL)updateFind:(ZLNoteModel *)model;
 
 
 @end

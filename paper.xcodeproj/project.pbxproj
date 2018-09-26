@@ -117,6 +117,9 @@
 		A07D74E8214E8555006749CD /* UIDevice+ZLLigs.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D74E7214E8555006749CD /* UIDevice+ZLLigs.m */; };
 		A07D74EC214E8A0B006749CD /* EmptyDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D74EA214E8A0B006749CD /* EmptyDataCell.m */; };
 		A07D74ED214E8A0B006749CD /* EmptyDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A07D74EB214E8A0B006749CD /* EmptyDataCell.xib */; };
+		A0D26582215B202300ADA626 /* ZLCapsuleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D26580215B202300ADA626 /* ZLCapsuleDetailViewController.m */; };
+		A0D26583215B202300ADA626 /* ZLCapsuleDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D26581215B202300ADA626 /* ZLCapsuleDetailViewController.xib */; };
+		A0D26587215B230000ADA626 /* FlashShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D26586215B230000ADA626 /* FlashShineLabel.m */; };
 		D412F2668F735689CA9DDFC2 /* Pods_paper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD2F18FBF98AB8A85D35C7E /* Pods_paper.framework */; };
 /* End PBXBuildFile section */
 
@@ -343,6 +346,11 @@
 		A07D74E9214E8A0B006749CD /* EmptyDataCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyDataCell.h; sourceTree = "<group>"; };
 		A07D74EA214E8A0B006749CD /* EmptyDataCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyDataCell.m; sourceTree = "<group>"; };
 		A07D74EB214E8A0B006749CD /* EmptyDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataCell.xib; sourceTree = "<group>"; };
+		A0D2657F215B202300ADA626 /* ZLCapsuleDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLCapsuleDetailViewController.h; sourceTree = "<group>"; };
+		A0D26580215B202300ADA626 /* ZLCapsuleDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLCapsuleDetailViewController.m; sourceTree = "<group>"; };
+		A0D26581215B202300ADA626 /* ZLCapsuleDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLCapsuleDetailViewController.xib; sourceTree = "<group>"; };
+		A0D26585215B230000ADA626 /* FlashShineLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashShineLabel.h; sourceTree = "<group>"; };
+		A0D26586215B230000ADA626 /* FlashShineLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashShineLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -523,6 +531,7 @@
 		A07D73B4214DB95C006749CD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				A0D26584215B22D600ADA626 /* FlashShineLabel */,
 				A0783D5C2154E55F0028E346 /* XHDatePicker */,
 				A07D74DF214E81A8006749CD /* FMDB */,
 				A07D74DB214E7FAB006749CD /* TipNotification */,
@@ -724,6 +733,9 @@
 				A07D7475214DD6E3006749CD /* ZLFutureViewController.h */,
 				A07D7476214DD6E3006749CD /* ZLFutureViewController.m */,
 				A07D7477214DD6E3006749CD /* ZLFutureViewController.xib */,
+				A0D2657F215B202300ADA626 /* ZLCapsuleDetailViewController.h */,
+				A0D26580215B202300ADA626 /* ZLCapsuleDetailViewController.m */,
+				A0D26581215B202300ADA626 /* ZLCapsuleDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -989,6 +1001,15 @@
 			path = FMDB;
 			sourceTree = "<group>";
 		};
+		A0D26584215B22D600ADA626 /* FlashShineLabel */ = {
+			isa = PBXGroup;
+			children = (
+				A0D26585215B230000ADA626 /* FlashShineLabel.h */,
+				A0D26586215B230000ADA626 /* FlashShineLabel.m */,
+			);
+			path = FlashShineLabel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1113,6 +1134,7 @@
 				A07D7474214DD6CF006749CD /* ZLEveryDayViewController.xib in Resources */,
 				A07D746F214DD623006749CD /* ZLCapsuleCell.xib in Resources */,
 				A07D74ED214E8A0B006749CD /* EmptyDataCell.xib in Resources */,
+				A0D26583215B202300ADA626 /* ZLCapsuleDetailViewController.xib in Resources */,
 				A07D738A214DB83E006749CD /* LaunchScreen.storyboard in Resources */,
 				A07D7479214DD6E3006749CD /* ZLFutureViewController.xib in Resources */,
 				A07D7387214DB83E006749CD /* Assets.xcassets in Resources */,
@@ -1229,6 +1251,7 @@
 				A0783D642154E65B0028E346 /* NSDate+ZLExtension.m in Sources */,
 				A07D7461214DD23D006749CD /* PopMenuModel.m in Sources */,
 				A07D7484214DDC50006749CD /* ZLPublishNoteViewController.m in Sources */,
+				A0D26582215B202300ADA626 /* ZLCapsuleDetailViewController.m in Sources */,
 				A07D7425214DC7FD006749CD /* ZLNoteViewController.m in Sources */,
 				A0783D5A2154E4280028E346 /* ZLPublishCapsuleViewController.m in Sources */,
 				A07D744C214DCAB6006749CD /* ZLTargetView.m in Sources */,
@@ -1278,6 +1301,7 @@
 				A07D7490214DDDDB006749CD /* UIKeyboardView.m in Sources */,
 				A07D748C214DDD90006749CD /* CustomTextView.m in Sources */,
 				A05305662150FD1200FFD7A7 /* ZLNoteDetailViewController.m in Sources */,
+				A0D26587215B230000ADA626 /* FlashShineLabel.m in Sources */,
 				A07D74AC214E0086006749CD /* ExtendEditTurnAndCutView.m in Sources */,
 				A07D7478214DD6E3006749CD /* ZLFutureViewController.m in Sources */,
 				A07D744F214DCAC9006749CD /* ZLSettingView.m in Sources */,

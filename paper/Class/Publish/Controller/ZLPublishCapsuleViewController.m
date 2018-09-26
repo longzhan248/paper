@@ -14,6 +14,7 @@
 @interface ZLPublishCapsuleViewController () <customDelegate, UITextViewDelegate>
 {
     UIButton *publishButton;
+    UIButton *closeButton;
     
     FMDBManager *manager;
     NSData *imgData;
@@ -21,7 +22,6 @@
     float height;
 }
 
-@property (nonatomic, strong) ZLCapsuleModel *capsuleModel;
 @property (nonatomic, strong) CustomAlbum    *customAlbum;
 
 @property (weak, nonatomic) IBOutlet PlaceholderTextView *textView;
@@ -42,8 +42,23 @@
     // 选择图片入口添加事件
     UITapGestureRecognizer *selectTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectImg:)];
     [_publishImg addGestureRecognizer:selectTap];
-
     [self _initPublishButton];
+    
+    if (_capsuleModel != nil) {
+        _textView.placeholder = @"";
+        _textView.text = _capsuleModel.content;
+        if ([_capsuleModel.imgData isEqual:@""] || _capsuleModel.imgData == nil) {
+            
+        } else {
+            _publishImg.image = [UIImage imageWithData:_capsuleModel.imgData];
+        }
+    }
+    
+    if ([_skip isEqualToString:@"present"]) {
+        [self _initBackClose];
+    } else {
+        closeButton.hidden = YES;
+    }
 }
 
 #pragma mark - 代码方式发布入口
@@ -63,6 +78,24 @@
     self.navigationItem.rightBarButtonItem = barright;
 }
 
+#pragma mark - 返回入口
+- (void)_initBackClose
+{
+    closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    closeButton.hidden = NO;
+    closeButton.frame = CGRectMake(0, 20, 60, 60);
+    closeButton.imageEdgeInsets = UIEdgeInsetsMake(5, -30, 0, 0);
+    [closeButton setImage:[UIImage imageNamed:@"publish_note_close"] forState:UIControlStateNormal];
+    closeButton.showsTouchWhenHighlighted = YES;
+    [closeButton addTarget:self action:@selector(backAction:) forControlEvents:UIControlEventTouchUpInside];
+    UIBarButtonItem *barleft = [[UIBarButtonItem alloc] initWithCustomView:closeButton];
+    self.navigationItem.leftBarButtonItem = barleft;
+}
+
+- (void)backAction:(UIButton *)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark - 选择图片入口进入涂图视图控制器
 - (void)selectImg:(UITapGestureRecognizer *)sender {
     if (self.customAlbum == nil) {
@@ -76,13 +109,20 @@
 #pragma mark - 发布事件
 - (void)sendAction:(UIButton *)sender
 {
-    if (_textView.text == nil || [_textView.text isEqualToString:@""]) {
-        [CommonUtil NotiTip:@"胶囊内容不能为空" color:TIP_COLOR];
+    manager = [FMDBManager shareManager];
+    [manager createCapsule];
+    if (_capsuleModel != nil) {
+        [self updateDataFMDB];
     } else {
-        manager = [FMDBManager shareManager];
-        [manager createCapsule];
-        [self insertDataFMDB];
+        if (_textView.text == nil || [_textView.text isEqualToString:@""]) {
+            [CommonUtil NotiTip:@"胶囊内容不能为空" color:TIP_COLOR];
+        } else {
+            manager = [FMDBManager shareManager];
+            [manager createCapsule];
+            [self insertDataFMDB];
+        }
     }
+    
 }
 
 #pragma mark - 发布便签插入数据库
@@ -111,6 +151,38 @@
     
     [CommonUtil NotiTip:@"胶囊发布成功" color:SUCCESS_COLOR];
     [self.navigationController popToRootViewControllerAnimated:YES];
+    [CommonUtil registerNotice:@"capsule_success" object:nil];
+}
+
+#pragma mark - 修改胶囊更新数据库
+- (void)updateDataFMDB {
+    NSDate *sendDate = [NSDate date];
+    NSString *ctime = [NSString stringWithFormat:@"%ld", (long)[sendDate timeIntervalSince1970]];
+    
+    if (0 == width) {
+        width = _capsuleModel.width;
+    }
+    if (0 == height) {
+        height = _capsuleModel.height;
+    }
+    
+    if ([imgData isEqual:@""] || imgData == nil) {
+        imgData = _capsuleModel.imgData;
+    }
+    
+    _capsuleModel.width = width;
+    _capsuleModel.height = height;
+    _capsuleModel.content = _textView.text;
+    
+    _capsuleModel.ctime = ctime;
+    _capsuleModel.imgData = imgData;
+    
+    //先删除再插入
+    [manager deleteFind:@"capsule" uid:_capsuleModel.uid];
+    [manager insertCapsuleDataWithModel:_capsuleModel];
+    
+    [CommonUtil NotiTip:@"胶囊修改成功" color:SUCCESS_COLOR];
+    [self dismissViewControllerAnimated:YES completion:nil];
     [CommonUtil registerNotice:@"capsule_success" object:nil];
 }
 
