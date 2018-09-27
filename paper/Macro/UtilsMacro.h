@@ -32,7 +32,7 @@ green:((float)((rgbValue & 0xFF00) >> 8))/255.0 \
 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 
 
-#define WHITE           0xFFFFFF
+#define WHITE           0xFAFBFC
 
 #define LINE_COLOR      0xF5F5F5
 

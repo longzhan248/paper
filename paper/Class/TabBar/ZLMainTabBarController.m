@@ -16,6 +16,7 @@
 
 #import "ZLPublishNoteViewController.h"
 #import "ZLSelectDayViewController.h"
+#import "ZLPublishTargetViewController.h"
 
 @interface ZLMainTabBarController ()
 
@@ -82,12 +83,14 @@
     if ([firstIndex isEqualToString:@"0"]) {
         ZLPublishNoteViewController *noteCtrl = [[ZLPublishNoteViewController alloc] init];
         BaseNavigationController *baseNav = [[BaseNavigationController alloc] initWithRootViewController:noteCtrl];
-        baseNav.canDragBack = NO;
         [self presentViewController:baseNav animated:YES completion:nil];
     } else if ([firstIndex isEqualToString:@"1"]) {
         ZLSelectDayViewController *selectDayCtrl = [[ZLSelectDayViewController alloc] init];
         BaseNavigationController *baseNav = [[BaseNavigationController alloc] initWithRootViewController:selectDayCtrl];
-        baseNav.canDragBack = NO;
+        [self presentViewController:baseNav animated:YES completion:nil];
+    } else if ([firstIndex isEqualToString:@"2"]) {
+        ZLPublishTargetViewController *targetCtrl = [[ZLPublishTargetViewController alloc] init];
+        BaseNavigationController *baseNav = [[BaseNavigationController alloc] initWithRootViewController:targetCtrl];
         [self presentViewController:baseNav animated:YES completion:nil];
     }
 }

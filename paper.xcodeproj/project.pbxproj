@@ -120,6 +120,9 @@
 		A0D26582215B202300ADA626 /* ZLCapsuleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D26580215B202300ADA626 /* ZLCapsuleDetailViewController.m */; };
 		A0D26583215B202300ADA626 /* ZLCapsuleDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D26581215B202300ADA626 /* ZLCapsuleDetailViewController.xib */; };
 		A0D26587215B230000ADA626 /* FlashShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D26586215B230000ADA626 /* FlashShineLabel.m */; };
+		A0D26589215B74E100ADA626 /* ZLTargetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D26588215B74E100ADA626 /* ZLTargetViewController.xib */; };
+		A0D2658D215B758700ADA626 /* ZLPublishTargetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D2658B215B758700ADA626 /* ZLPublishTargetViewController.m */; };
+		A0D2658E215B758700ADA626 /* ZLPublishTargetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D2658C215B758700ADA626 /* ZLPublishTargetViewController.xib */; };
 		D412F2668F735689CA9DDFC2 /* Pods_paper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AD2F18FBF98AB8A85D35C7E /* Pods_paper.framework */; };
 /* End PBXBuildFile section */
 
@@ -351,6 +354,10 @@
 		A0D26581215B202300ADA626 /* ZLCapsuleDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLCapsuleDetailViewController.xib; sourceTree = "<group>"; };
 		A0D26585215B230000ADA626 /* FlashShineLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FlashShineLabel.h; sourceTree = "<group>"; };
 		A0D26586215B230000ADA626 /* FlashShineLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlashShineLabel.m; sourceTree = "<group>"; };
+		A0D26588215B74E100ADA626 /* ZLTargetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLTargetViewController.xib; sourceTree = "<group>"; };
+		A0D2658A215B758600ADA626 /* ZLPublishTargetViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLPublishTargetViewController.h; sourceTree = "<group>"; };
+		A0D2658B215B758700ADA626 /* ZLPublishTargetViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLPublishTargetViewController.m; sourceTree = "<group>"; };
+		A0D2658C215B758700ADA626 /* ZLPublishTargetViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLPublishTargetViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -769,6 +776,9 @@
 				A026D450215496FA0070ACAA /* ZLSelectDayViewController.h */,
 				A026D451215496FA0070ACAA /* ZLSelectDayViewController.m */,
 				A026D452215496FA0070ACAA /* ZLSelectDayViewController.xib */,
+				A0D2658A215B758600ADA626 /* ZLPublishTargetViewController.h */,
+				A0D2658B215B758700ADA626 /* ZLPublishTargetViewController.m */,
+				A0D2658C215B758700ADA626 /* ZLPublishTargetViewController.xib */,
 				A0783D522154E31E0028E346 /* ZLSelectCapsuleViewController.h */,
 				A0783D532154E31E0028E346 /* ZLSelectCapsuleViewController.m */,
 				A0783D542154E31E0028E346 /* ZLSelectCapsuleViewController.xib */,
@@ -802,6 +812,7 @@
 			children = (
 				A07D743D214DCA79006749CD /* ZLTargetViewController.h */,
 				A07D743E214DCA79006749CD /* ZLTargetViewController.m */,
+				A0D26588215B74E100ADA626 /* ZLTargetViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1124,6 +1135,8 @@
 				A026D454215496FA0070ACAA /* ZLSelectDayViewController.xib in Resources */,
 				A07D747D214DDA59006749CD /* TuSDK.bundle in Resources */,
 				A07D73D6214DBABC006749CD /* zh-Hans.strings in Resources */,
+				A0D2658E215B758700ADA626 /* ZLPublishTargetViewController.xib in Resources */,
+				A0D26589215B74E100ADA626 /* ZLTargetViewController.xib in Resources */,
 				A07D7426214DC7FD006749CD /* ZLNoteViewController.xib in Resources */,
 				A0783D5B2154E4280028E346 /* ZLPublishCapsuleViewController.xib in Resources */,
 				A07D740C214DC528006749CD /* BaseTabBarController.xib in Resources */,
@@ -1311,6 +1324,7 @@
 				A07D7429214DC9D0006749CD /* ZLCapsuleModel.m in Sources */,
 				A07D7473214DD6CF006749CD /* ZLEveryDayViewController.m in Sources */,
 				A07D7414214DC6C3006749CD /* ZLNoteModel.m in Sources */,
+				A0D2658D215B758700ADA626 /* ZLPublishTargetViewController.m in Sources */,
 				A07D740B214DC528006749CD /* BaseTabBarController.m in Sources */,
 				A07D7440214DCA79006749CD /* ZLTargetViewController.m in Sources */,
 				A07D7467214DD367006749CD /* GTMBase64.m in Sources */,
