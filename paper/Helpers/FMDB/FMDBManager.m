@@ -45,7 +45,7 @@
 
 #pragma mark - 创建便签表
 - (void)createNote {
-    BOOL result = [fmdb executeUpdate:@"create table if not exists note(uid varchar ,title varchar,content varchar ,starTag varchar , colorTag varchar , width varchar ,height varchar , imgData blob ,ctime varchar)"];
+    BOOL result = [fmdb executeUpdate:@"create table if not exists note(uid varchar ,title varchar ,content varchar ,starTag varchar ,colorTag varchar ,width varchar ,height varchar ,imgData blob ,ctime varchar)"];
     if (result) {
         NSLog(@"==========创建表成功");
     }else{
@@ -55,7 +55,7 @@
 
 #pragma mark - 创建胶囊表
 - (void)createCapsule {
-    BOOL result = [fmdb executeUpdate:@"create table if not exists capsule(uid varchar ,title varchar,content varchar ,statusTag varchar,today varchar,width varchar ,height varchar , imgData blob, cdate varchar,ctime varchar)"];
+    BOOL result = [fmdb executeUpdate:@"create table if not exists capsule(uid varchar ,title varchar ,content varchar ,statusTag varchar ,today varchar ,width varchar ,height varchar ,imgData blob ,cdate varchar ,ctime varchar)"];
     if (result) {
         NSLog(@"==========创建表成功");
     }else{
@@ -63,7 +63,18 @@
     }
 }
 
-#pragma mark - 便签表插入数据
+#pragma mark - 创建目标表
+- (void)createTarget {
+    BOOL result = [fmdb executeUpdate:@"create table if not exists target(uid varchar ,title varchar ,content varchar ,endDate varchar ,statusTag varchar ,ctime varchar)"];
+    if (result) {
+        NSLog(@"==========创建表成功");
+    }else{
+        NSLog(@"----------失败");
+    }
+}
+
+#pragma mark - 表插入数据
+/// 便签model插入数据
 - (BOOL)insertDataWithModel:(ZLNoteModel *)model
 {
     BOOL isSucess = [fmdb executeUpdate:@"insert into note(uid , title , content , starTag , colorTag , width, height, imgData ,ctime) values(?,?,?,?,?,?,?,?,?)",@(model.uid),model.title,model.content,@(model.starTag),@(model.colorTag),@(model.width),@(model.height),model.imgData,model.ctime];
@@ -86,6 +97,18 @@
     return isSucess;
 }
 
+/// 目标model插入数据
+- (BOOL)insertTargetDataWithModel:(ZLTargetModel *)model {
+    BOOL isSuccess = [fmdb executeUpdate:@"insert into target(uid ,title ,content ,endDate ,statusTag ,ctime) values(?,?,?,?,?,?)", @(model.uid), model.title, model.content, model.endDate, @(model.statusTag), model.ctime];
+    if (isSuccess) {
+        NSLog(@"===========插入数据成功");
+    }else{
+        NSLog(@"-----------失败");
+    }
+    return isSuccess;
+}
+
+#pragma mark - 表查询数据
 /// 返回便签查询结果
 - (FMResultSet *)backResults:(NSString *)conditions {
     NSString *querySql = [NSString stringWithFormat:@"select * from %@ ORDER BY ctime desc",conditions];
@@ -98,6 +121,13 @@
     return [fmdb executeQuery:querySql];
 }
 
+/// 返回目标查询结果
+- (FMResultSet *)backTargetDataWithModel:(NSString *)conditions {
+    NSString *querySql = [NSString stringWithFormat:@"select * from %@ ORDER BY ctime desc", conditions];
+    return [fmdb executeQuery:querySql];
+}
+
+#pragma mark - 其他
 /// 返回查询结果
 - (FMResultSet *)selectFind:(NSString *)conditions
 {

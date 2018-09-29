@@ -209,7 +209,7 @@
     
     // 2014-09-17 07:11:08
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    //时间格式要一侄
+    // 时间格式要一侄
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     NSDate* createdAtDate = [dateFormatter dateFromString:createdAt];
     [dateFormatter setTimeZone:[NSTimeZone localTimeZone]];

@@ -117,6 +117,9 @@
 		A07D74E8214E8555006749CD /* UIDevice+ZLLigs.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D74E7214E8555006749CD /* UIDevice+ZLLigs.m */; };
 		A07D74EC214E8A0B006749CD /* EmptyDataCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A07D74EA214E8A0B006749CD /* EmptyDataCell.m */; };
 		A07D74ED214E8A0B006749CD /* EmptyDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A07D74EB214E8A0B006749CD /* EmptyDataCell.xib */; };
+		A0937622215F2AC300455F0D /* ZLTargetTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0937621215F2AC300455F0D /* ZLTargetTableView.m */; };
+		A093762B215F4EDD00455F0D /* ZLTargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0937629215F4EDD00455F0D /* ZLTargetCell.m */; };
+		A093762C215F4EDD00455F0D /* ZLTargetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A093762A215F4EDD00455F0D /* ZLTargetCell.xib */; };
 		A0D26582215B202300ADA626 /* ZLCapsuleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D26580215B202300ADA626 /* ZLCapsuleDetailViewController.m */; };
 		A0D26583215B202300ADA626 /* ZLCapsuleDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D26581215B202300ADA626 /* ZLCapsuleDetailViewController.xib */; };
 		A0D26587215B230000ADA626 /* FlashShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D26586215B230000ADA626 /* FlashShineLabel.m */; };
@@ -349,6 +352,11 @@
 		A07D74E9214E8A0B006749CD /* EmptyDataCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EmptyDataCell.h; sourceTree = "<group>"; };
 		A07D74EA214E8A0B006749CD /* EmptyDataCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EmptyDataCell.m; sourceTree = "<group>"; };
 		A07D74EB214E8A0B006749CD /* EmptyDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyDataCell.xib; sourceTree = "<group>"; };
+		A0937620215F2AC300455F0D /* ZLTargetTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLTargetTableView.h; sourceTree = "<group>"; };
+		A0937621215F2AC300455F0D /* ZLTargetTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLTargetTableView.m; sourceTree = "<group>"; };
+		A0937628215F4EDD00455F0D /* ZLTargetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLTargetCell.h; sourceTree = "<group>"; };
+		A0937629215F4EDD00455F0D /* ZLTargetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLTargetCell.m; sourceTree = "<group>"; };
+		A093762A215F4EDD00455F0D /* ZLTargetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLTargetCell.xib; sourceTree = "<group>"; };
 		A0D2657F215B202300ADA626 /* ZLCapsuleDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLCapsuleDetailViewController.h; sourceTree = "<group>"; };
 		A0D26580215B202300ADA626 /* ZLCapsuleDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLCapsuleDetailViewController.m; sourceTree = "<group>"; };
 		A0D26581215B202300ADA626 /* ZLCapsuleDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLCapsuleDetailViewController.xib; sourceTree = "<group>"; };
@@ -794,6 +802,11 @@
 			children = (
 				A07D744A214DCAB6006749CD /* ZLTargetView.h */,
 				A07D744B214DCAB6006749CD /* ZLTargetView.m */,
+				A0937620215F2AC300455F0D /* ZLTargetTableView.h */,
+				A0937621215F2AC300455F0D /* ZLTargetTableView.m */,
+				A0937628215F4EDD00455F0D /* ZLTargetCell.h */,
+				A0937629215F4EDD00455F0D /* ZLTargetCell.m */,
+				A093762A215F4EDD00455F0D /* ZLTargetCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1143,6 +1156,7 @@
 				A07D7419214DC6F7006749CD /* ZLNoteHeaderCell.xib in Resources */,
 				A07D7485214DDC50006749CD /* ZLPublishNoteViewController.xib in Resources */,
 				A07D741E214DC750006749CD /* ZLNoteCell.xib in Resources */,
+				A093762C215F4EDD00455F0D /* ZLTargetCell.xib in Resources */,
 				A0783D612154E5A20028E346 /* XHDatePickerView.xib in Resources */,
 				A07D7474214DD6CF006749CD /* ZLEveryDayViewController.xib in Resources */,
 				A07D746F214DD623006749CD /* ZLCapsuleCell.xib in Resources */,
@@ -1283,6 +1297,7 @@
 				A07D7401214DC3AE006749CD /* APBaseNavigationController.m in Sources */,
 				A07D74B8214E023C006749CD /* CustomPhoto.m in Sources */,
 				A07D74E8214E8555006749CD /* UIDevice+ZLLigs.m in Sources */,
+				A093762B215F4EDD00455F0D /* ZLTargetCell.m in Sources */,
 				A07D7421214DC7B6006749CD /* ZLNoteTableView.m in Sources */,
 				A0783D672154E7060028E346 /* UIView+ZLExtension.m in Sources */,
 				A07D73D9214DBBF2006749CD /* JastorRuntimeHelper.m in Sources */,
@@ -1323,6 +1338,7 @@
 				A07D73F8214DC2A3006749CD /* VendorsModel.m in Sources */,
 				A07D7429214DC9D0006749CD /* ZLCapsuleModel.m in Sources */,
 				A07D7473214DD6CF006749CD /* ZLEveryDayViewController.m in Sources */,
+				A0937622215F2AC300455F0D /* ZLTargetTableView.m in Sources */,
 				A07D7414214DC6C3006749CD /* ZLNoteModel.m in Sources */,
 				A0D2658D215B758700ADA626 /* ZLPublishTargetViewController.m in Sources */,
 				A07D740B214DC528006749CD /* BaseTabBarController.m in Sources */,

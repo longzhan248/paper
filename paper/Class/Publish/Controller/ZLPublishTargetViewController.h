@@ -8,10 +8,10 @@
 
 #import "BaseViewController.h"
 
-NS_ASSUME_NONNULL_BEGIN
+@class ZLTargetModel;
 
 @interface ZLPublishTargetViewController : BaseViewController
 
-@end
+@property (nonatomic, strong) ZLTargetModel *targetModel;
 
-NS_ASSUME_NONNULL_END
+@end

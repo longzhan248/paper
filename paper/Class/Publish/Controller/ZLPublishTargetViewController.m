@@ -10,20 +10,27 @@
 #import "PlaceholderTextView.h"
 #import "XHDatePickerView.h"
 #import "NSDate+ZLExtension.h"
+#import "ZLTargetModel.h"
 
 @interface ZLPublishTargetViewController () <UITextViewDelegate>
 {
+    FMDBManager *manager;
+    
     UIButton *closeButton;
     UILabel *titleLabel;
     UIButton *publishButton;
     
     NSString *ymdDate;
+    
+    int statusTag;
 }
 
 @property (weak, nonatomic) IBOutlet PlaceholderTextView *textView;
 @property (weak, nonatomic) IBOutlet UILabel *numLabel;
 @property (weak, nonatomic) IBOutlet UIView *dateView;
 @property (weak, nonatomic) IBOutlet UILabel *dateLabel;
+@property (weak, nonatomic) IBOutlet UITextField *titleTextField;
+- (IBAction)remindAction:(UISwitch *)sender;
 
 @end
 
@@ -74,6 +81,58 @@
 #pragma mark - 发布事件
 - (void)sendAction:(UIButton *)sender
 {
+    manager = [FMDBManager shareManager];
+    [manager createTarget];
+    if (nil == _titleTextField.text || [_titleTextField.text isEqualToString:@""]) {
+        [CommonUtil NotiTip:@"目标标题不能为空" color:TIP_COLOR];
+    } else if (nil == _textView.text || [_textView.text isEqualToString:@""]) {
+        [CommonUtil NotiTip:@"目标内容不能为空" color:TIP_COLOR];
+    } else if (nil == ymdDate || [ymdDate isEqualToString:@""]) {
+        [CommonUtil NotiTip:@"截止日期不能为空" color:TIP_COLOR];
+    } else {
+        [self insertDataFMDB];
+    }
+}
+
+- (void)dateAction:(UITapGestureRecognizer *)sender
+{
+    XHDatePickerView *datepicker = [[XHDatePickerView alloc] initWithCompleteBlock:^(NSDate *startDate,NSDate *endDate) {
+        ymdDate = [startDate stringWithFormat:@"yyyy-MM-dd"];
+        _dateLabel.text = ymdDate;
+    }];
+    datepicker.datePickerStyle = DateStyleShowYearMonthDay;
+    datepicker.dateType = DateTypeStartDate;
+    
+    NSDate * date = [NSDate date];//当前时间
+    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
+    NSString *currentDayStr = [dateFormatter stringFromDate:date];
+    
+    datepicker.minLimitDate = [NSDate date:currentDayStr WithFormat:@"yyyy-MM-dd"];
+    [datepicker show];
+}
+
+- (IBAction)remindAction:(UISwitch *)sender {
+    statusTag = sender.isOn;
+}
+
+#pragma mark - 发布目标插入数据库
+- (void)insertDataFMDB {
+    NSDate *sendDate = [NSDate date];
+    NSString *ctime = [NSString stringWithFormat:@"%ld", (long)[sendDate timeIntervalSince1970]];
+    
+    _targetModel = [[ZLTargetModel alloc] init];
+    _targetModel.uid = [ctime intValue];
+    _targetModel.title = _titleTextField.text;
+    _targetModel.content = _textView.text;
+    _targetModel.endDate = ymdDate;
+    _targetModel.statusTag = statusTag;
+    _targetModel.ctime = ctime;
+    [manager insertTargetDataWithModel:_targetModel];
+    
+    [CommonUtil NotiTip:@"目标发布" color:SUCCESS_COLOR];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [CommonUtil registerNotice:@"target_success" object:nil];
 }
 
 #pragma mark - UITextView delegate
@@ -94,22 +153,10 @@
     }
 }
 
-- (void)dateAction:(UITapGestureRecognizer *)sender
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
-    XHDatePickerView *datepicker = [[XHDatePickerView alloc] initWithCompleteBlock:^(NSDate *startDate,NSDate *endDate) {
-        ymdDate = [startDate stringWithFormat:@"yyyy-MM-dd"];
-        _dateLabel.text = ymdDate;
-    }];
-    datepicker.datePickerStyle = DateStyleShowYearMonthDay;
-    datepicker.dateType = DateTypeStartDate;
-    
-    NSDate * date = [NSDate date];//当前时间
-    NSDateFormatter * dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MM-dd"];
-    NSString *currentDayStr = [dateFormatter stringFromDate:date];
-    
-    datepicker.minLimitDate = [NSDate date:currentDayStr WithFormat:@"yyyy-MM-dd"];
-    [datepicker show];
+    [textField resignFirstResponder];
+    return YES;
 }
 
 

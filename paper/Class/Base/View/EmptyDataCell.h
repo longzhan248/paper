@@ -12,4 +12,8 @@
 
 @property (nonatomic, copy) NSString *emptyNote;
 
+@property (nonatomic, copy) NSString *emptyCapsule;
+
+@property (nonatomic, copy) NSString *emptyTarget;
+
 @end

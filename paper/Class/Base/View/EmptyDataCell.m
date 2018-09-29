@@ -16,4 +16,13 @@
     self.top = (ScreenHeight-100)/2;
 }
 
+- (void)setEmptyCapsule:(NSString *)emptyCapsule {
+    self.width = ScreenWidth;
+    self.top = (ScreenHeight-260)/2;
+}
+
+- (void)setEmptyTarget:(NSString *)emptyTarget {
+    [self setEmptyCapsule:emptyTarget];
+}
+
 @end
