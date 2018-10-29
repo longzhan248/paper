@@ -66,6 +66,8 @@ blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
 #define SUCCESS_COLOR    kUIColorFromRGB(0x2FCBF9)
 #define WARNNING_COLOR   kUIColorFromRGB(0xfa5459)
 
+#define LOCAL_NOTIFY_SCHEDULE_ID   @"schedule"
+
 //全局变量属性
 #define app         [[CommonUtil shareInstance] myDelegate]
 

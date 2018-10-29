@@ -15,6 +15,7 @@
                 <outlet property="dateLabel" destination="YMh-hR-SkY" id="gtz-pJ-IRE"/>
                 <outlet property="dateView" destination="YZx-kf-Ds1" id="XMS-pm-XxB"/>
                 <outlet property="numLabel" destination="mxO-B9-qcs" id="Fif-Gm-1Y5"/>
+                <outlet property="remindSwitch" destination="vCK-PI-Fov" id="Amn-6w-6y9"/>
                 <outlet property="textView" destination="L7T-7s-uDm" id="qH4-OM-pwX"/>
                 <outlet property="titleTextField" destination="qqp-yb-ucH" id="hKA-Vd-wan"/>
                 <outlet property="view" destination="H5K-tM-IId" id="eDg-p4-KnJ"/>

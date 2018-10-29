@@ -58,6 +58,8 @@
 
 #define LEFT_PADDING_HEIGHT         15
 
+#define LEFT_TARGET_HEIGHT          30
+
 //图片资源
 #define TB_NOTE                          @"tabbar_icon_memo_unselect"
 #define TB_CAPSULE                       @"tabbar_icon_capsule_unselect"

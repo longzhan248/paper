@@ -9,12 +9,16 @@
 #import "ZLTargetViewController.h"
 #import "ZLTargetTableView.h"
 #import "EmptyDataCell.h"
+#import "ZLTargetCell.h"
+#import "CountTimer.h"
+#import "CountDown.h"
 
 @interface ZLTargetViewController ()
 {
     FMDBManager *manager;
 }
 
+@property (nonatomic, strong) CountDown *countDown;
 @property (nonatomic, strong) ZLTargetTableView *targetTableView;
 @property (nonatomic, strong) NSMutableArray *targetArray;
 @property (nonatomic, strong) EmptyDataCell *emptyCell;
@@ -44,6 +48,19 @@
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
 }
 
+-(void)updateTimeInVisibleCells{
+    NSArray  *cells = self.targetTableView.visibleCells; //取出屏幕可见ceLl
+    for (ZLTargetCell *cell in cells) {
+        ZLTargetModel *targetModel = _targetArray[cell.tag];
+        cell.timeLabel.text = [[CountTimer shareInstance] getNowTimeWithString:targetModel.endHDate];
+        if ([cell.timeLabel.text isEqualToString:@"目标已过期"]) {
+            cell.timeLabel.textColor = kUIColorFromRGB(0XFA5133);
+        }else{
+            cell.timeLabel.textColor = kUIColorFromRGB(MAIN_COLOR);
+        }
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -60,6 +77,13 @@
     manager = [FMDBManager shareManager];
     [manager createTarget];
     [self getTargetListData];
+    
+    self.countDown = [[CountDown alloc] init];
+    __weak __typeof(self) weakSelf = self;
+    /// 每一秒回调一次
+    [self.countDown countDownWithPER_SECBlock:^{
+        [weakSelf updateTimeInVisibleCells];
+    }];
 }
 
 #pragma mark - 获取最新数据

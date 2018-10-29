@@ -91,13 +91,14 @@
                 <outlet property="contentLabel" destination="pBa-rJ-HXh" id="ajv-2x-Pcl"/>
                 <outlet property="remindImg" destination="YFU-2U-2T1" id="mNl-J3-MXP"/>
                 <outlet property="timeLabel" destination="IS9-V7-X0A" id="xBx-6X-wwt"/>
+                <outlet property="timerView" destination="uAu-T9-ZLn" id="VKN-ks-kKl"/>
                 <outlet property="titleLabel" destination="n2Z-wm-JA8" id="1DZ-rB-1VH"/>
             </connections>
             <point key="canvasLocation" x="-2" y="89"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="bg_blue" width="375" height="279.5"/>
+        <image name="bg_blue" width="375" height="279"/>
         <image name="icon_remind" width="30" height="30"/>
     </resources>
 </document>

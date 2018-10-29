@@ -8,6 +8,7 @@
 
 #import "ZLTargetCell.h"
 #import "ZLTargetModel.h"
+#import "CountTimer.h"
 
 @interface ZLTargetCell ()
 
@@ -16,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *bgImgView;
 @property (weak, nonatomic) IBOutlet UIImageView *remindImg;
+@property (weak, nonatomic) IBOutlet UIView *timerView;
 
 @end
 
@@ -42,7 +44,16 @@
     
     _titleLabel.text = targetModel.title;
     _contentLabel.text = targetModel.content;
-    _timeLabel.text = [CommonUtil dateChangeFormatAt:[CommonUtil timeIntervalTurnDate:targetModel.ctime]];
+    [self updateTimeInVisibleCells];
+}
+
+- (void)updateTimeInVisibleCells {
+    self.timeLabel.text = [[CountTimer shareInstance] getNowTimeWithString:_targetModel.endHDate];
+    if ([self.timeLabel.text isEqualToString:@"目标已过期"]) {
+        self.timeLabel.textColor = kUIColorFromRGB(0XFA5133);
+    } else {
+        self.timeLabel.textColor = kUIColorFromRGB(MAIN_COLOR);
+    }
 }
 
 @end

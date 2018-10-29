@@ -8,6 +8,7 @@
 
 #import "FMDBManager.h"
 #import "FMDatabase.h"
+#import <FMDB/FMDatabaseAdditions.h>
 
 @implementation FMDBManager
 {
@@ -65,11 +66,20 @@
 
 #pragma mark - 创建目标表
 - (void)createTarget {
-    BOOL result = [fmdb executeUpdate:@"create table if not exists target(uid varchar ,title varchar ,content varchar ,endDate varchar ,statusTag varchar ,ctime varchar)"];
+    BOOL result = [fmdb executeUpdate:@"create table if not exists target(uid varchar ,title varchar ,content varchar ,endHDate varchar ,endDate varchar ,statusTag varchar ,ctime varchar)"];
     if (result) {
         NSLog(@"==========创建表成功");
     }else{
         NSLog(@"----------失败");
+    }
+    if (![fmdb columnExists:@"endHDate" inTableWithName:@"target"]) {
+        NSString *alertStr = [NSString stringWithFormat:@"ALERT TABLE %@ ADD %@ varchar", @"target", @"endHDate"];
+        BOOL worked = [fmdb executeUpdate:alertStr];
+        if (worked) {
+            NSLog(@"插入成功");
+        } else {
+            NSLog(@"插入失败");
+        }
     }
 }
 
@@ -99,7 +109,7 @@
 
 /// 目标model插入数据
 - (BOOL)insertTargetDataWithModel:(ZLTargetModel *)model {
-    BOOL isSuccess = [fmdb executeUpdate:@"insert into target(uid ,title ,content ,endDate ,statusTag ,ctime) values(?,?,?,?,?,?)", @(model.uid), model.title, model.content, model.endDate, @(model.statusTag), model.ctime];
+    BOOL isSuccess = [fmdb executeUpdate:@"insert into target(uid ,title ,content ,endHDate ,endDate ,statusTag ,ctime) values(?,?,?,?,?,?,?)", @(model.uid), model.title, model.content, model.endHDate, model.endDate, @(model.statusTag), model.ctime];
     if (isSuccess) {
         NSLog(@"===========插入数据成功");
     }else{

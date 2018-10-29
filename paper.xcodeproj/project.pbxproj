@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1802D9FA2181D47500D38AC3 /* ZLTargetDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1802D9F82181D47500D38AC3 /* ZLTargetDetailViewController.m */; };
+		1802D9FB2181D47500D38AC3 /* ZLTargetDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1802D9F92181D47500D38AC3 /* ZLTargetDetailViewController.xib */; };
+		1802DA002181D6F300D38AC3 /* cellLine@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1802D9FE2181D6F300D38AC3 /* cellLine@2x.png */; };
+		1802DA012181D6F300D38AC3 /* bgImage_HL@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1802D9FF2181D6F300D38AC3 /* bgImage_HL@2x.png */; };
+		1802DA042181D70700D38AC3 /* LCActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 1802DA032181D70700D38AC3 /* LCActionSheet.m */; };
+		18AD6FAD2182FA3E00B6E387 /* ping.caf in Resources */ = {isa = PBXBuildFile; fileRef = 18AD6FAC2182FA3E00B6E387 /* ping.caf */; };
+		18AD6FB22182FE6E00B6E387 /* CountTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD6FB12182FE6E00B6E387 /* CountTimer.m */; };
+		18AD6FB52182FED700B6E387 /* CountDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AD6FB42182FED700B6E387 /* CountDown.m */; };
 		A026D453215496FA0070ACAA /* ZLSelectDayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A026D451215496FA0070ACAA /* ZLSelectDayViewController.m */; };
 		A026D454215496FA0070ACAA /* ZLSelectDayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A026D452215496FA0070ACAA /* ZLSelectDayViewController.xib */; };
 		A05305662150FD1200FFD7A7 /* ZLNoteDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05305642150FD1200FFD7A7 /* ZLNoteDetailViewController.m */; };
@@ -120,6 +128,11 @@
 		A0937622215F2AC300455F0D /* ZLTargetTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0937621215F2AC300455F0D /* ZLTargetTableView.m */; };
 		A093762B215F4EDD00455F0D /* ZLTargetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0937629215F4EDD00455F0D /* ZLTargetCell.m */; };
 		A093762C215F4EDD00455F0D /* ZLTargetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A093762A215F4EDD00455F0D /* ZLTargetCell.xib */; };
+		A0BE6345216063E700EF2425 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BE6344216063E700EF2425 /* CustomCell.m */; };
+		A0BE63482160716100EF2425 /* CustomCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BE63472160716100EF2425 /* CustomCollectionCell.m */; };
+		A0BE634C216072D900EF2425 /* CustomHeaderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BE634B216072D900EF2425 /* CustomHeaderFooterView.m */; };
+		A0C46924215F78580033B24E /* CellDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C46923215F78580033B24E /* CellDataAdapter.m */; };
+		A0C46927215F7FF00033B24E /* CellHeaderFooterDataAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C46926215F7FF00033B24E /* CellHeaderFooterDataAdapter.m */; };
 		A0D26582215B202300ADA626 /* ZLCapsuleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D26580215B202300ADA626 /* ZLCapsuleDetailViewController.m */; };
 		A0D26583215B202300ADA626 /* ZLCapsuleDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A0D26581215B202300ADA626 /* ZLCapsuleDetailViewController.xib */; };
 		A0D26587215B230000ADA626 /* FlashShineLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D26586215B230000ADA626 /* FlashShineLabel.m */; };
@@ -147,6 +160,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1802D9F72181D47500D38AC3 /* ZLTargetDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLTargetDetailViewController.h; sourceTree = "<group>"; };
+		1802D9F82181D47500D38AC3 /* ZLTargetDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLTargetDetailViewController.m; sourceTree = "<group>"; };
+		1802D9F92181D47500D38AC3 /* ZLTargetDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLTargetDetailViewController.xib; sourceTree = "<group>"; };
+		1802D9FE2181D6F300D38AC3 /* cellLine@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cellLine@2x.png"; sourceTree = "<group>"; };
+		1802D9FF2181D6F300D38AC3 /* bgImage_HL@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bgImage_HL@2x.png"; sourceTree = "<group>"; };
+		1802DA022181D70700D38AC3 /* LCActionSheet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LCActionSheet.h; sourceTree = "<group>"; };
+		1802DA032181D70700D38AC3 /* LCActionSheet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LCActionSheet.m; sourceTree = "<group>"; };
+		18AD6FAC2182FA3E00B6E387 /* ping.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ping.caf; sourceTree = "<group>"; };
+		18AD6FAE2182FA5600B6E387 /* paper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = paper.entitlements; sourceTree = "<group>"; };
+		18AD6FB02182FE6E00B6E387 /* CountTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountTimer.h; sourceTree = "<group>"; };
+		18AD6FB12182FE6E00B6E387 /* CountTimer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountTimer.m; sourceTree = "<group>"; };
+		18AD6FB32182FED700B6E387 /* CountDown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountDown.h; sourceTree = "<group>"; };
+		18AD6FB42182FED700B6E387 /* CountDown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDown.m; sourceTree = "<group>"; };
 		2117A67AF783258375A84ACA /* Pods-paper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paper.release.xcconfig"; path = "Pods/Target Support Files/Pods-paper/Pods-paper.release.xcconfig"; sourceTree = "<group>"; };
 		21CA42BC667E8F1E55BAD79A /* Pods-paper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-paper.debug.xcconfig"; path = "Pods/Target Support Files/Pods-paper/Pods-paper.debug.xcconfig"; sourceTree = "<group>"; };
 		3AD2F18FBF98AB8A85D35C7E /* Pods_paper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_paper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -357,6 +383,16 @@
 		A0937628215F4EDD00455F0D /* ZLTargetCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLTargetCell.h; sourceTree = "<group>"; };
 		A0937629215F4EDD00455F0D /* ZLTargetCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLTargetCell.m; sourceTree = "<group>"; };
 		A093762A215F4EDD00455F0D /* ZLTargetCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLTargetCell.xib; sourceTree = "<group>"; };
+		A0BE6343216063E700EF2425 /* CustomCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
+		A0BE6344216063E700EF2425 /* CustomCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		A0BE63462160716100EF2425 /* CustomCollectionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomCollectionCell.h; sourceTree = "<group>"; };
+		A0BE63472160716100EF2425 /* CustomCollectionCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionCell.m; sourceTree = "<group>"; };
+		A0BE634A216072D900EF2425 /* CustomHeaderFooterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomHeaderFooterView.h; sourceTree = "<group>"; };
+		A0BE634B216072D900EF2425 /* CustomHeaderFooterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomHeaderFooterView.m; sourceTree = "<group>"; };
+		A0C46922215F78580033B24E /* CellDataAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellDataAdapter.h; sourceTree = "<group>"; };
+		A0C46923215F78580033B24E /* CellDataAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellDataAdapter.m; sourceTree = "<group>"; };
+		A0C46925215F7FF00033B24E /* CellHeaderFooterDataAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CellHeaderFooterDataAdapter.h; sourceTree = "<group>"; };
+		A0C46926215F7FF00033B24E /* CellHeaderFooterDataAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CellHeaderFooterDataAdapter.m; sourceTree = "<group>"; };
 		A0D2657F215B202300ADA626 /* ZLCapsuleDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZLCapsuleDetailViewController.h; sourceTree = "<group>"; };
 		A0D26580215B202300ADA626 /* ZLCapsuleDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZLCapsuleDetailViewController.m; sourceTree = "<group>"; };
 		A0D26581215B202300ADA626 /* ZLCapsuleDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLCapsuleDetailViewController.xib; sourceTree = "<group>"; };
@@ -401,6 +437,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1802D9FC2181D6DE00D38AC3 /* LCActionSheet */ = {
+			isa = PBXGroup;
+			children = (
+				1802D9FD2181D6F300D38AC3 /* Image */,
+				1802DA022181D70700D38AC3 /* LCActionSheet.h */,
+				1802DA032181D70700D38AC3 /* LCActionSheet.m */,
+			);
+			path = LCActionSheet;
+			sourceTree = "<group>";
+		};
+		1802D9FD2181D6F300D38AC3 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				1802D9FE2181D6F300D38AC3 /* cellLine@2x.png */,
+				1802D9FF2181D6F300D38AC3 /* bgImage_HL@2x.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		18AD6FAF2182FE4500B6E387 /* CountDown */ = {
+			isa = PBXGroup;
+			children = (
+				18AD6FB02182FE6E00B6E387 /* CountTimer.h */,
+				18AD6FB12182FE6E00B6E387 /* CountTimer.m */,
+				18AD6FB32182FED700B6E387 /* CountDown.h */,
+				18AD6FB42182FED700B6E387 /* CountDown.m */,
+			);
+			path = CountDown;
+			sourceTree = "<group>";
+		};
 		1CA316ECE2307BB80CF387D2 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +526,7 @@
 		A07D737C214DB83D006749CD /* paper */ = {
 			isa = PBXGroup;
 			children = (
+				18AD6FAE2182FA5600B6E387 /* paper.entitlements */,
 				A07D73B5214DB962006749CD /* Resource */,
 				A07D73B4214DB95C006749CD /* Helpers */,
 				A07D73B3214DB958006749CD /* Vendors */,
@@ -546,6 +613,8 @@
 		A07D73B4214DB95C006749CD /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				18AD6FAF2182FE4500B6E387 /* CountDown */,
+				1802D9FC2181D6DE00D38AC3 /* LCActionSheet */,
 				A0D26584215B22D600ADA626 /* FlashShineLabel */,
 				A0783D5C2154E55F0028E346 /* XHDatePicker */,
 				A07D74DF214E81A8006749CD /* FMDB */,
@@ -567,6 +636,7 @@
 		A07D73B5214DB962006749CD /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				18AD6FAC2182FA3E00B6E387 /* ping.caf */,
 				A07D747B214DDA59006749CD /* TuSDK.bundle */,
 				A07D747A214DDA59006749CD /* TuSDK.strings */,
 			);
@@ -645,11 +715,7 @@
 		A07D73BE214DB9B5006749CD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A07D73FC214DC2FB006749CD /* BaseTableView.h */,
-				A07D73FD214DC2FB006749CD /* BaseTableView.m */,
-				A07D74E9214E8A0B006749CD /* EmptyDataCell.h */,
-				A07D74EA214E8A0B006749CD /* EmptyDataCell.m */,
-				A07D74EB214E8A0B006749CD /* EmptyDataCell.xib */,
+				A0C46920215F78030033B24E /* TableView&CollectionView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -826,6 +892,9 @@
 				A07D743D214DCA79006749CD /* ZLTargetViewController.h */,
 				A07D743E214DCA79006749CD /* ZLTargetViewController.m */,
 				A0D26588215B74E100ADA626 /* ZLTargetViewController.xib */,
+				1802D9F72181D47500D38AC3 /* ZLTargetDetailViewController.h */,
+				1802D9F82181D47500D38AC3 /* ZLTargetDetailViewController.m */,
+				1802D9F92181D47500D38AC3 /* ZLTargetDetailViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1025,6 +1094,76 @@
 			path = FMDB;
 			sourceTree = "<group>";
 		};
+		A0BE63422160632800EF2425 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				A0BE6343216063E700EF2425 /* CustomCell.h */,
+				A0BE6344216063E700EF2425 /* CustomCell.m */,
+				A0BE63462160716100EF2425 /* CustomCollectionCell.h */,
+				A0BE63472160716100EF2425 /* CustomCollectionCell.m */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		A0BE6349216072AD00EF2425 /* CustomHeaderFooterView */ = {
+			isa = PBXGroup;
+			children = (
+				A0BE634A216072D900EF2425 /* CustomHeaderFooterView.h */,
+				A0BE634B216072D900EF2425 /* CustomHeaderFooterView.m */,
+			);
+			path = CustomHeaderFooterView;
+			sourceTree = "<group>";
+		};
+		A0C4691D215F77AA0033B24E /* BaseTableView */ = {
+			isa = PBXGroup;
+			children = (
+				A07D73FC214DC2FB006749CD /* BaseTableView.h */,
+				A07D73FD214DC2FB006749CD /* BaseTableView.m */,
+			);
+			path = BaseTableView;
+			sourceTree = "<group>";
+		};
+		A0C4691E215F77CA0033B24E /* BaseCell */ = {
+			isa = PBXGroup;
+			children = (
+				A0BE6349216072AD00EF2425 /* CustomHeaderFooterView */,
+				A0BE63422160632800EF2425 /* CustomCell */,
+				A0C4691F215F77D10033B24E /* EmptyCell */,
+			);
+			path = BaseCell;
+			sourceTree = "<group>";
+		};
+		A0C4691F215F77D10033B24E /* EmptyCell */ = {
+			isa = PBXGroup;
+			children = (
+				A07D74E9214E8A0B006749CD /* EmptyDataCell.h */,
+				A07D74EA214E8A0B006749CD /* EmptyDataCell.m */,
+				A07D74EB214E8A0B006749CD /* EmptyDataCell.xib */,
+			);
+			path = EmptyCell;
+			sourceTree = "<group>";
+		};
+		A0C46920215F78030033B24E /* TableView&CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				A0C46921215F78140033B24E /* TableViewDataAdapter */,
+				A0C4691E215F77CA0033B24E /* BaseCell */,
+				A0C4691D215F77AA0033B24E /* BaseTableView */,
+			);
+			path = "TableView&CollectionView";
+			sourceTree = "<group>";
+		};
+		A0C46921215F78140033B24E /* TableViewDataAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				A0C46922215F78580033B24E /* CellDataAdapter.h */,
+				A0C46923215F78580033B24E /* CellDataAdapter.m */,
+				A0C46925215F7FF00033B24E /* CellHeaderFooterDataAdapter.h */,
+				A0C46926215F7FF00033B24E /* CellHeaderFooterDataAdapter.m */,
+			);
+			path = TableViewDataAdapter;
+			sourceTree = "<group>";
+		};
 		A0D26584215B22D600ADA626 /* FlashShineLabel */ = {
 			isa = PBXGroup;
 			children = (
@@ -1105,6 +1244,11 @@
 				TargetAttributes = {
 					A07D7379214DB83D006749CD = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					A07D7391214DB83E006749CD = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -1142,6 +1286,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A05305672150FD1200FFD7A7 /* ZLNoteDetailViewController.xib in Resources */,
+				1802DA012181D6F300D38AC3 /* bgImage_HL@2x.png in Resources */,
 				A0783D562154E31E0028E346 /* ZLSelectCapsuleViewController.xib in Resources */,
 				A07D7498214DDF6E006749CD /* MLInputDodger.bundle in Resources */,
 				A07D747C214DDA59006749CD /* TuSDK.strings in Resources */,
@@ -1149,10 +1294,13 @@
 				A07D747D214DDA59006749CD /* TuSDK.bundle in Resources */,
 				A07D73D6214DBABC006749CD /* zh-Hans.strings in Resources */,
 				A0D2658E215B758700ADA626 /* ZLPublishTargetViewController.xib in Resources */,
+				1802DA002181D6F300D38AC3 /* cellLine@2x.png in Resources */,
+				18AD6FAD2182FA3E00B6E387 /* ping.caf in Resources */,
 				A0D26589215B74E100ADA626 /* ZLTargetViewController.xib in Resources */,
 				A07D7426214DC7FD006749CD /* ZLNoteViewController.xib in Resources */,
 				A0783D5B2154E4280028E346 /* ZLPublishCapsuleViewController.xib in Resources */,
 				A07D740C214DC528006749CD /* BaseTabBarController.xib in Resources */,
+				1802D9FB2181D47500D38AC3 /* ZLTargetDetailViewController.xib in Resources */,
 				A07D7419214DC6F7006749CD /* ZLNoteHeaderCell.xib in Resources */,
 				A07D7485214DDC50006749CD /* ZLPublishNoteViewController.xib in Resources */,
 				A07D741E214DC750006749CD /* ZLNoteCell.xib in Resources */,
@@ -1261,11 +1409,13 @@
 			files = (
 				A07D7382214DB83E006749CD /* ViewController.m in Sources */,
 				A07D74A4214DDFA0006749CD /* MLInputDodgerRetractView.m in Sources */,
+				A0BE6345216063E700EF2425 /* CustomCell.m in Sources */,
 				A07D7407214DC48F006749CD /* BaseViewController.m in Sources */,
 				A07D73EB214DBFEF006749CD /* ZLTabBar.m in Sources */,
 				A0783D552154E31E0028E346 /* ZLSelectCapsuleViewController.m in Sources */,
 				A07D7489214DDD1B006749CD /* PlaceholderTextView.m in Sources */,
 				A07D74E2214E81C4006749CD /* FMDBManager.m in Sources */,
+				18AD6FB22182FE6E00B6E387 /* CountTimer.m in Sources */,
 				A07D738D214DB83E006749CD /* main.m in Sources */,
 				A07D7497214DDF6E006749CD /* MLInputDodger.m in Sources */,
 				A07D7493214DDF5D006749CD /* UIView+MLInputDodger.m in Sources */,
@@ -1292,6 +1442,7 @@
 				A07D745A214DD18E006749CD /* HyPopMenuView.m in Sources */,
 				A07D7456214DCF94006749CD /* TabPageView.m in Sources */,
 				A07D74EC214E8A0B006749CD /* EmptyDataCell.m in Sources */,
+				A0C46927215F7FF00033B24E /* CellHeaderFooterDataAdapter.m in Sources */,
 				A07D74DE214E7FCB006749CD /* ZLNotificationManager.m in Sources */,
 				A07D741D214DC750006749CD /* ZLNoteCell.m in Sources */,
 				A07D7401214DC3AE006749CD /* APBaseNavigationController.m in Sources */,
@@ -1299,10 +1450,13 @@
 				A07D74E8214E8555006749CD /* UIDevice+ZLLigs.m in Sources */,
 				A093762B215F4EDD00455F0D /* ZLTargetCell.m in Sources */,
 				A07D7421214DC7B6006749CD /* ZLNoteTableView.m in Sources */,
+				18AD6FB52182FED700B6E387 /* CountDown.m in Sources */,
 				A0783D672154E7060028E346 /* UIView+ZLExtension.m in Sources */,
 				A07D73D9214DBBF2006749CD /* JastorRuntimeHelper.m in Sources */,
+				A0BE63482160716100EF2425 /* CustomCollectionCell.m in Sources */,
 				A07D74A8214DFC85006749CD /* TutuSimpleBase.m in Sources */,
 				A07D746A214DD606006749CD /* ZLCapsuleTableView.m in Sources */,
+				1802D9FA2181D47500D38AC3 /* ZLTargetDetailViewController.m in Sources */,
 				A07D73F2214DC1A2006749CD /* CommonUtil.m in Sources */,
 				A07D74A1214DDFA0006749CD /* YcKeyBoardView.m in Sources */,
 				A07D74C1214E02DB006749CD /* CustomAlbumViewController.m in Sources */,
@@ -1311,9 +1465,11 @@
 				A07D746E214DD623006749CD /* ZLCapsuleCell.m in Sources */,
 				A07D7404214DC3C7006749CD /* BaseNavigationController.m in Sources */,
 				A07D74B2214E0185006749CD /* CustomPopList.m in Sources */,
+				1802DA042181D70700D38AC3 /* LCActionSheet.m in Sources */,
 				A07D73E2214DBD20006749CD /* UIView+ZLAdditions.m in Sources */,
 				A053056A2151309A00FFD7A7 /* NSString+ZLSizeLab.m in Sources */,
 				A0783D5F2154E5880028E346 /* XHDatePickerView.m in Sources */,
+				A0C46924215F78580033B24E /* CellDataAdapter.m in Sources */,
 				A07D73FB214DC2D8006749CD /* BaseModel.m in Sources */,
 				A07D7434214DCA30006749CD /* ZLPublishModel.m in Sources */,
 				A07D74B5214E01AE006749CD /* CustomPhotoViewController.m in Sources */,
@@ -1336,6 +1492,7 @@
 				A07D74A3214DDFA0006749CD /* UIScrollView+MLInputDodger.m in Sources */,
 				A07D74CA214E071E006749CD /* AppDelegate+ZLTuSDK.m in Sources */,
 				A07D73F8214DC2A3006749CD /* VendorsModel.m in Sources */,
+				A0BE634C216072D900EF2425 /* CustomHeaderFooterView.m in Sources */,
 				A07D7429214DC9D0006749CD /* ZLCapsuleModel.m in Sources */,
 				A07D7473214DD6CF006749CD /* ZLEveryDayViewController.m in Sources */,
 				A0937622215F2AC300455F0D /* ZLTargetTableView.m in Sources */,
@@ -1514,6 +1671,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = paper/paper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3267W5QB2K;
 				GCC_PREFIX_HEADER = "paper/Supporting Files/paperHeader.pch";
@@ -1535,6 +1693,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = paper/paper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3267W5QB2K;
 				GCC_PREFIX_HEADER = "paper/Supporting Files/paperHeader.pch";

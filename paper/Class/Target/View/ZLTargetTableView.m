@@ -9,6 +9,7 @@
 #import "ZLTargetTableView.h"
 #import "ZLTargetModel.h"
 #import "ZLTargetCell.h"
+#import "ZLTargetDetailViewController.h"
 
 @interface ZLTargetTableView ()
 
@@ -34,6 +35,11 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    _targetModel = self.data[indexPath.row];
+    ZLTargetDetailViewController *targetCtrl = [[ZLTargetDetailViewController alloc] init];
+    targetCtrl.targetModel = _targetModel;
+    [self.zl_viewController.navigationController pushViewController:targetCtrl animated:YES];
+    
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

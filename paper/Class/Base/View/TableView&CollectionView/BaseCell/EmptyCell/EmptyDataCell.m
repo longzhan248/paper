@@ -22,7 +22,8 @@
 }
 
 - (void)setEmptyTarget:(NSString *)emptyTarget {
-    [self setEmptyCapsule:emptyTarget];
+    self.width = ScreenWidth;
+    self.top = (ScreenHeight-260)/2;
 }
 
 @end

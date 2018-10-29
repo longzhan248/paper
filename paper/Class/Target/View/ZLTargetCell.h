@@ -16,5 +16,8 @@
 
 @property (nonatomic, strong)  ZLTargetModel *targetModel;
 
+@property (weak, nonatomic, readonly) IBOutlet UILabel *timeLabel;
+
+
 @end
 

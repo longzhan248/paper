@@ -10,8 +10,17 @@
 
 @class ZLTargetModel;
 
+@protocol UpdateDelegate <NSObject>
+
+//代理
+- (void)updateTarget:(ZLTargetModel *)targetModel;
+
+@end
+
 @interface ZLPublishTargetViewController : BaseViewController
 
 @property (nonatomic, strong) ZLTargetModel *targetModel;
+
+@property (nonatomic, weak) id<UpdateDelegate> delegate;
 
 @end
